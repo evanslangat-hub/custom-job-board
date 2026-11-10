@@ -1,0 +1,21 @@
+{
+  "email": {
+    "enabled": false,
+    "smtp_host": "smtp.gmail.com",
+    "smtp_port": 587,
+    "use_ssl": false,
+    "username": "evanslangat22@gmail.com",
+    "password": "YOUR_APP_PASSWORD",
+    "from": "evanslangat22@gmail.com",
+    "to": ["evanslangat22@gmail.com"]
+  },
+  "run": {
+    "max_remote_jobs": 40,
+    "min_match_score": 55
+  },
+  "companies": {
+    "ashby": ["people-data-labs", "oyster", "revenuebase-inc", "supabase", "notion", "zapier"],
+    "greenhouse": ["canonical", "gitlab", "elastic", "fivetran", "mongodb", "moniepoint", "stripe", "datadog"],
+    "lever": []
+  }
+}
