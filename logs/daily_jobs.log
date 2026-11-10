@@ -1,0 +1,268 @@
+2026-11-09 11:27:31,462 INFO Starting daily job report
+2026-11-09 11:27:32,975 INFO Remotive: 9 eligible jobs
+2026-11-09 11:27:37,211 WARNING fetch_remoteok failed: argument must be int or float, not str
+2026-11-09 11:27:38,938 WARNING fetch_jobicy failed: sequence item 0: expected str instance, list found
+2026-11-09 11:27:43,925 INFO Arbeitnow: 12 eligible jobs
+2026-11-09 11:27:45,757 INFO WeWorkRemotely: 23 eligible jobs
+2026-11-09 11:27:47,349 INFO MyJobMag: 0 data-engineer listings
+2026-11-09 11:27:47,350 INFO Selected 17 remote jobs (min score 55)
+2026-11-09 11:27:47,357 INFO Report written to C:\Users\THINKBOOK\Documents\custom ai\reports\jobs-2026-11-09.html
+2026-11-09 11:27:47,358 INFO Done
+2026-11-09 11:31:33,790 INFO Starting daily job report
+2026-11-09 11:31:35,684 INFO Remotive: 9 eligible jobs
+2026-11-09 11:31:38,763 INFO RemoteOK: 63 eligible jobs
+2026-11-09 11:31:41,644 INFO Jobicy: 1 eligible jobs
+2026-11-09 11:31:44,978 INFO Arbeitnow: 12 eligible jobs
+2026-11-09 11:31:46,910 INFO WeWorkRemotely: 23 eligible jobs
+2026-11-09 11:31:50,551 INFO MyJobMag: 14 data-engineer listings
+2026-11-09 11:31:50,553 INFO Selected 29 remote jobs and 26 Kenya jobs (min score 55)
+2026-11-09 11:31:50,558 INFO Report written to C:\Users\THINKBOOK\Documents\custom ai\reports\jobs-2026-11-09.html
+2026-11-09 11:31:50,559 INFO Done
+2026-11-09 11:32:51,228 INFO Starting daily job report
+2026-11-09 11:32:53,225 INFO Remotive: 9 eligible jobs
+2026-11-09 11:32:55,833 INFO RemoteOK: 63 eligible jobs
+2026-11-09 11:32:58,239 INFO Jobicy: 1 eligible jobs
+2026-11-09 11:33:03,412 INFO Arbeitnow: 12 eligible jobs
+2026-11-09 11:33:05,451 INFO WeWorkRemotely: 23 eligible jobs
+2026-11-09 11:33:07,522 INFO MyJobMag: 14 data-engineer listings
+2026-11-09 11:33:07,523 INFO Selected 1 remote jobs and 26 Kenya jobs (min score 55)
+2026-11-09 11:33:07,527 INFO Report written to C:\Users\THINKBOOK\Documents\custom ai\reports\jobs-2026-11-09.html
+2026-11-09 11:33:07,527 INFO Done
+2026-11-09 11:33:28,591 INFO Remotive: 9 eligible jobs
+2026-11-09 11:33:32,728 INFO RemoteOK: 63 eligible jobs
+2026-11-09 11:39:15,050 INFO Starting daily job report
+2026-11-09 11:39:16,921 INFO Remotive: 9 eligible jobs
+2026-11-09 11:39:19,846 INFO RemoteOK: 63 eligible jobs
+2026-11-09 11:39:21,792 INFO Jobicy: 1 eligible jobs
+2026-11-09 11:39:28,644 INFO Arbeitnow: 12 eligible jobs
+2026-11-09 11:39:30,950 INFO WeWorkRemotely: 23 eligible jobs
+2026-11-09 11:39:32,784 INFO MyJobMag: 14 data-engineer listings
+2026-11-09 11:39:34,266 INFO Ashby people-data-labs: 5 eligible jobs
+2026-11-09 11:39:37,409 INFO Ashby oyster: 13 eligible jobs
+2026-11-09 11:39:40,312 INFO Ashby revenuebase-inc: 4 eligible jobs
+2026-11-09 11:39:43,036 INFO Ashby supabase: 69 eligible jobs
+2026-11-09 11:39:47,484 INFO Ashby notion: 0 eligible jobs
+2026-11-09 11:39:49,795 INFO Ashby zapier: 4 eligible jobs
+2026-11-09 11:39:52,171 INFO Greenhouse canonical: 238 eligible jobs
+2026-11-09 11:39:54,429 INFO Greenhouse gitlab: 51 eligible jobs
+2026-11-09 11:39:56,321 INFO Greenhouse elastic: 1 eligible jobs
+2026-11-09 11:39:57,466 INFO Greenhouse fivetran: 24 eligible jobs
+2026-11-09 11:39:59,233 INFO Greenhouse mongodb: 0 eligible jobs
+2026-11-09 11:40:00,463 INFO Greenhouse moniepoint: 49 eligible jobs
+2026-11-09 11:40:03,469 INFO Greenhouse stripe: 111 eligible jobs
+2026-11-09 11:40:06,237 INFO Greenhouse datadog: 52 eligible jobs
+2026-11-09 11:40:06,242 INFO Selected 5 remote jobs and 26 Kenya jobs (min score 55)
+2026-11-09 11:40:06,247 INFO Report written to C:\Users\THINKBOOK\Documents\custom ai\reports\jobs-2026-11-09.html
+2026-11-09 11:40:06,248 INFO Done
+2026-11-09 11:41:36,140 INFO Starting daily job report
+2026-11-09 11:41:37,650 INFO Remotive: 9 eligible jobs
+2026-11-09 11:41:40,209 INFO RemoteOK: 63 eligible jobs
+2026-11-09 11:41:41,588 INFO Jobicy: 1 eligible jobs
+2026-11-09 11:41:44,073 INFO Arbeitnow: 12 eligible jobs
+2026-11-09 11:41:45,397 INFO WeWorkRemotely: 23 eligible jobs
+2026-11-09 11:41:47,024 INFO MyJobMag: 14 data-engineer listings
+2026-11-09 11:41:49,230 INFO Ashby people-data-labs: 5 eligible jobs
+2026-11-09 11:41:50,840 INFO Ashby oyster: 13 eligible jobs
+2026-11-09 11:41:52,111 INFO Ashby revenuebase-inc: 4 eligible jobs
+2026-11-09 11:41:53,981 INFO Ashby supabase: 69 eligible jobs
+2026-11-09 11:42:01,518 INFO Ashby notion: 0 eligible jobs
+2026-11-09 11:42:02,600 INFO Ashby zapier: 4 eligible jobs
+2026-11-09 11:42:07,602 INFO Greenhouse canonical: 238 eligible jobs
+2026-11-09 11:42:10,784 INFO Greenhouse gitlab: 51 eligible jobs
+2026-11-09 11:42:15,342 INFO Greenhouse elastic: 1 eligible jobs
+2026-11-09 11:42:17,126 INFO Greenhouse fivetran: 24 eligible jobs
+2026-11-09 11:42:19,328 INFO Greenhouse mongodb: 0 eligible jobs
+2026-11-09 11:42:20,526 INFO Greenhouse moniepoint: 49 eligible jobs
+2026-11-09 11:42:23,490 INFO Greenhouse stripe: 111 eligible jobs
+2026-11-09 11:42:26,091 INFO Greenhouse datadog: 52 eligible jobs
+2026-11-09 11:42:26,095 INFO Selected 11 remote jobs and 26 Kenya jobs (min score 55)
+2026-11-09 11:42:26,098 INFO Report written to C:\Users\THINKBOOK\Documents\custom ai\reports\jobs-2026-11-09.html
+2026-11-09 11:42:26,098 INFO Done
+2026-11-09 11:43:25,934 INFO Starting daily job report
+2026-11-09 11:43:27,302 INFO Remotive: 9 eligible jobs
+2026-11-09 11:43:29,660 INFO RemoteOK: 63 eligible jobs
+2026-11-09 11:43:31,878 INFO Jobicy: 1 eligible jobs
+2026-11-09 11:43:36,582 INFO Arbeitnow: 12 eligible jobs
+2026-11-09 11:43:37,782 INFO WeWorkRemotely: 23 eligible jobs
+2026-11-09 11:43:39,416 INFO MyJobMag: 14 data-engineer listings
+2026-11-09 11:43:40,295 INFO Ashby people-data-labs: 5 eligible jobs
+2026-11-09 11:43:41,778 INFO Ashby oyster: 13 eligible jobs
+2026-11-09 11:43:44,159 INFO Ashby revenuebase-inc: 4 eligible jobs
+2026-11-09 11:43:46,545 INFO Ashby supabase: 69 eligible jobs
+2026-11-09 11:43:49,241 INFO Ashby notion: 0 eligible jobs
+2026-11-09 11:43:50,860 INFO Ashby zapier: 4 eligible jobs
+2026-11-09 11:43:53,631 INFO Greenhouse canonical: 238 eligible jobs
+2026-11-09 11:43:56,306 INFO Greenhouse gitlab: 51 eligible jobs
+2026-11-09 11:44:01,006 INFO Greenhouse elastic: 1 eligible jobs
+2026-11-09 11:44:02,959 INFO Greenhouse fivetran: 24 eligible jobs
+2026-11-09 11:44:05,281 INFO Greenhouse mongodb: 0 eligible jobs
+2026-11-09 11:44:06,607 INFO Greenhouse moniepoint: 49 eligible jobs
+2026-11-09 11:44:10,693 INFO Greenhouse stripe: 111 eligible jobs
+2026-11-09 11:44:14,642 INFO Greenhouse datadog: 52 eligible jobs
+2026-11-09 11:44:14,645 INFO Selected 19 remote jobs and 26 Kenya jobs (min score 55)
+2026-11-09 11:44:14,649 INFO Report written to C:\Users\THINKBOOK\Documents\custom ai\reports\jobs-2026-11-09.html
+2026-11-09 11:44:14,649 INFO Done
+2026-11-09 11:44:42,129 INFO Remotive: 9 eligible jobs
+2026-11-09 11:44:44,418 INFO RemoteOK: 63 eligible jobs
+2026-11-09 11:44:46,097 INFO Jobicy: 1 eligible jobs
+2026-11-09 11:44:49,010 INFO Arbeitnow: 12 eligible jobs
+2026-11-09 11:44:50,559 INFO WeWorkRemotely: 23 eligible jobs
+2026-11-09 11:44:53,121 INFO MyJobMag: 14 data-engineer listings
+2026-11-09 11:44:53,967 INFO Ashby people-data-labs: 5 eligible jobs
+2026-11-09 11:44:55,149 INFO Ashby oyster: 13 eligible jobs
+2026-11-09 11:44:56,011 INFO Ashby revenuebase-inc: 4 eligible jobs
+2026-11-09 11:44:57,738 INFO Ashby supabase: 69 eligible jobs
+2026-11-09 11:45:01,931 INFO Ashby notion: 0 eligible jobs
+2026-11-09 11:45:03,316 INFO Ashby zapier: 4 eligible jobs
+2026-11-09 11:45:06,315 INFO Greenhouse canonical: 238 eligible jobs
+2026-11-09 11:45:08,521 INFO Greenhouse gitlab: 51 eligible jobs
+2026-11-09 11:45:20,409 INFO Greenhouse elastic: 1 eligible jobs
+2026-11-09 11:45:22,132 INFO Greenhouse fivetran: 24 eligible jobs
+2026-11-09 11:45:24,365 INFO Greenhouse mongodb: 0 eligible jobs
+2026-11-09 11:45:25,520 INFO Greenhouse moniepoint: 49 eligible jobs
+2026-11-09 11:45:28,789 INFO Greenhouse stripe: 111 eligible jobs
+2026-11-09 11:45:32,933 INFO Greenhouse datadog: 52 eligible jobs
+2026-11-09 11:47:46,049 INFO Starting daily job report
+2026-11-09 11:47:48,490 INFO Remotive: 9 eligible jobs
+2026-11-09 11:47:51,493 INFO RemoteOK: 60 eligible jobs
+2026-11-09 11:47:52,910 INFO Jobicy: 1 eligible jobs
+2026-11-09 11:47:57,330 INFO Arbeitnow: 12 eligible jobs
+2026-11-09 11:47:58,795 INFO WeWorkRemotely: 23 eligible jobs
+2026-11-09 11:48:00,795 INFO MyJobMag: 14 data-engineer listings
+2026-11-09 11:48:02,353 INFO Ashby people-data-labs: 5 eligible jobs
+2026-11-09 11:48:04,865 INFO Ashby oyster: 7 eligible jobs
+2026-11-09 11:48:06,343 INFO Ashby revenuebase-inc: 4 eligible jobs
+2026-11-09 11:48:09,569 INFO Ashby supabase: 63 eligible jobs
+2026-11-09 11:48:15,707 INFO Ashby notion: 0 eligible jobs
+2026-11-09 11:48:17,444 INFO Ashby zapier: 4 eligible jobs
+2026-11-09 11:48:24,516 INFO Greenhouse canonical: 195 eligible jobs
+2026-11-09 11:48:29,769 INFO Greenhouse gitlab: 37 eligible jobs
+2026-11-09 11:48:36,069 INFO Greenhouse elastic: 1 eligible jobs
+2026-11-09 11:48:39,317 INFO Greenhouse fivetran: 24 eligible jobs
+2026-11-09 11:48:43,248 INFO Greenhouse mongodb: 0 eligible jobs
+2026-11-09 11:48:46,355 INFO Greenhouse moniepoint: 49 eligible jobs
+2026-11-09 11:48:51,636 INFO Greenhouse stripe: 26 eligible jobs
+2026-11-09 11:48:56,936 INFO Greenhouse datadog: 4 eligible jobs
+2026-11-09 11:48:56,939 INFO Selected 16 remote jobs and 26 Kenya jobs (min score 55)
+2026-11-09 11:48:56,941 INFO Report written to C:\Users\THINKBOOK\Documents\custom ai\reports\jobs-2026-11-09.html
+2026-11-09 11:48:56,941 INFO Done
+2026-11-09 11:49:06,731 INFO Remotive: 9 eligible jobs
+2026-11-09 11:49:08,629 INFO RemoteOK: 60 eligible jobs
+2026-11-09 11:49:09,890 INFO Jobicy: 1 eligible jobs
+2026-11-09 11:49:13,024 INFO Arbeitnow: 12 eligible jobs
+2026-11-09 11:49:14,388 INFO WeWorkRemotely: 23 eligible jobs
+2026-11-09 11:49:16,060 INFO MyJobMag: 14 data-engineer listings
+2026-11-09 11:49:17,056 INFO Ashby people-data-labs: 5 eligible jobs
+2026-11-09 11:49:19,196 INFO Ashby oyster: 7 eligible jobs
+2026-11-09 11:49:20,310 INFO Ashby revenuebase-inc: 4 eligible jobs
+2026-11-09 11:49:22,538 INFO Ashby supabase: 63 eligible jobs
+2026-11-09 11:49:32,794 INFO Ashby notion: 0 eligible jobs
+2026-11-09 11:49:34,108 INFO Ashby zapier: 4 eligible jobs
+2026-11-09 11:49:41,503 INFO Greenhouse canonical: 195 eligible jobs
+2026-11-09 11:49:45,316 INFO Greenhouse gitlab: 37 eligible jobs
+2026-11-09 11:49:52,877 INFO Greenhouse elastic: 1 eligible jobs
+2026-11-09 11:49:57,352 INFO Greenhouse fivetran: 24 eligible jobs
+2026-11-09 11:50:02,353 INFO Greenhouse mongodb: 0 eligible jobs
+2026-11-09 11:50:06,843 INFO Greenhouse moniepoint: 49 eligible jobs
+2026-11-09 11:50:15,458 INFO Greenhouse stripe: 26 eligible jobs
+2026-11-09 11:50:20,900 INFO Greenhouse datadog: 4 eligible jobs
+2026-11-09 11:51:49,901 INFO Starting daily job report
+2026-11-09 11:51:51,233 INFO Remotive: 9 eligible jobs
+2026-11-09 11:51:54,017 INFO RemoteOK: 60 eligible jobs
+2026-11-09 11:51:55,791 INFO Jobicy: 1 eligible jobs
+2026-11-09 11:51:59,458 INFO Arbeitnow: 12 eligible jobs
+2026-11-09 11:52:00,889 INFO WeWorkRemotely: 23 eligible jobs
+2026-11-09 11:52:02,557 INFO MyJobMag: 14 data-engineer listings
+2026-11-09 11:52:04,595 INFO Ashby people-data-labs: 5 eligible jobs
+2026-11-09 11:52:06,084 INFO Ashby oyster: 7 eligible jobs
+2026-11-09 11:52:07,212 INFO Ashby revenuebase-inc: 4 eligible jobs
+2026-11-09 11:52:10,209 INFO Ashby supabase: 63 eligible jobs
+2026-11-09 11:52:15,992 INFO Ashby notion: 0 eligible jobs
+2026-11-09 11:52:17,713 INFO Ashby zapier: 4 eligible jobs
+2026-11-09 11:52:20,197 INFO Greenhouse canonical: 195 eligible jobs
+2026-11-09 11:52:23,714 INFO Greenhouse gitlab: 37 eligible jobs
+2026-11-09 11:52:28,811 INFO Greenhouse elastic: 1 eligible jobs
+2026-11-09 11:52:31,535 INFO Greenhouse fivetran: 24 eligible jobs
+2026-11-09 11:52:33,605 INFO Greenhouse mongodb: 0 eligible jobs
+2026-11-09 11:52:34,758 INFO Greenhouse moniepoint: 49 eligible jobs
+2026-11-09 11:52:38,392 INFO Greenhouse stripe: 26 eligible jobs
+2026-11-09 11:52:44,426 INFO Greenhouse datadog: 4 eligible jobs
+2026-11-09 11:52:44,428 INFO Selected 16 remote jobs and 26 Kenya jobs (min score 55)
+2026-11-09 11:52:44,430 INFO Report written to C:\Users\THINKBOOK\Documents\custom ai\reports\jobs-2026-11-09.html
+2026-11-09 11:52:44,430 INFO Email disabled in config - report saved only
+2026-11-09 11:52:44,430 INFO Done
+2026-11-10 09:27:55,339 INFO Starting daily job report
+2026-11-10 09:27:56,624 INFO Remotive: 8 eligible jobs
+2026-11-10 09:27:58,654 INFO RemoteOK: 59 eligible jobs
+2026-11-10 09:28:00,071 INFO Jobicy: 0 eligible jobs
+2026-11-10 09:28:02,848 INFO Arbeitnow: 7 eligible jobs
+2026-11-10 09:28:04,297 INFO WeWorkRemotely: 23 eligible jobs
+2026-11-10 09:28:06,167 INFO MyJobMag: 14 data-engineer listings
+2026-11-10 09:28:07,263 INFO Ashby people-data-labs: 5 eligible jobs
+2026-11-10 09:28:08,710 INFO Ashby oyster: 6 eligible jobs
+2026-11-10 09:28:09,758 INFO Ashby revenuebase-inc: 4 eligible jobs
+2026-11-10 09:28:11,552 INFO Ashby supabase: 67 eligible jobs
+2026-11-10 09:28:14,529 INFO Ashby notion: 0 eligible jobs
+2026-11-10 09:28:15,822 INFO Ashby zapier: 4 eligible jobs
+2026-11-10 09:28:17,817 INFO Greenhouse canonical: 195 eligible jobs
+2026-11-10 09:28:21,274 INFO Greenhouse gitlab: 35 eligible jobs
+2026-11-10 09:28:26,019 INFO Greenhouse elastic: 1 eligible jobs
+2026-11-10 09:28:27,734 INFO Greenhouse fivetran: 22 eligible jobs
+2026-11-10 09:28:29,885 INFO Greenhouse mongodb: 0 eligible jobs
+2026-11-10 09:28:30,882 INFO Greenhouse moniepoint: 44 eligible jobs
+2026-11-10 09:28:33,799 INFO Greenhouse stripe: 27 eligible jobs
+2026-11-10 09:28:36,074 INFO Greenhouse datadog: 4 eligible jobs
+2026-11-10 09:28:36,076 INFO Selected 16 remote jobs and 26 Kenya jobs (min score 55)
+2026-11-10 09:28:36,079 INFO Report written to C:\Users\THINKBOOK\Documents\custom ai\reports\jobs-2026-11-10.html
+2026-11-10 09:28:41,326 INFO Email sent to wearealivebbss@gmail.com
+2026-11-10 09:28:41,326 INFO Done
+2026-11-10 09:31:18,385 INFO Starting daily job report
+2026-11-10 09:31:19,546 INFO Remotive: 8 eligible jobs
+2026-11-10 09:31:21,683 INFO RemoteOK: 59 eligible jobs
+2026-11-10 09:31:23,015 INFO Jobicy: 0 eligible jobs
+2026-11-10 09:31:26,137 INFO Arbeitnow: 7 eligible jobs
+2026-11-10 09:31:27,507 INFO WeWorkRemotely: 23 eligible jobs
+2026-11-10 09:31:29,081 INFO MyJobMag: 14 data-engineer listings
+2026-11-10 09:31:30,111 INFO Ashby people-data-labs: 5 eligible jobs
+2026-11-10 09:31:31,562 INFO Ashby oyster: 6 eligible jobs
+2026-11-10 09:31:32,539 INFO Ashby revenuebase-inc: 4 eligible jobs
+2026-11-10 09:31:34,470 INFO Ashby supabase: 67 eligible jobs
+2026-11-10 09:31:37,391 INFO Ashby notion: 0 eligible jobs
+2026-11-10 09:31:38,610 INFO Ashby zapier: 4 eligible jobs
+2026-11-10 09:31:41,646 INFO Greenhouse canonical: 195 eligible jobs
+2026-11-10 09:31:44,879 INFO Greenhouse gitlab: 35 eligible jobs
+2026-11-10 09:31:49,521 INFO Greenhouse elastic: 1 eligible jobs
+2026-11-10 09:31:51,333 INFO Greenhouse fivetran: 22 eligible jobs
+2026-11-10 09:31:53,739 INFO Greenhouse mongodb: 0 eligible jobs
+2026-11-10 09:31:54,689 INFO Greenhouse moniepoint: 44 eligible jobs
+2026-11-10 09:31:57,627 INFO Greenhouse stripe: 27 eligible jobs
+2026-11-10 09:32:00,204 INFO Greenhouse datadog: 4 eligible jobs
+2026-11-10 09:32:00,208 INFO Selected 16 remote jobs and 26 Kenya jobs (min score 55)
+2026-11-10 09:32:00,211 INFO Report written to C:\Users\THINKBOOK\Documents\custom ai\reports\jobs-2026-11-10.html
+2026-11-10 09:32:04,248 INFO Email sent to wearealivebbss@gmail.com
+2026-11-10 09:32:04,248 INFO Done
+2026-11-10 09:38:02,613 INFO Starting daily job report
+2026-11-10 09:38:03,942 INFO Remotive: 8 eligible jobs
+2026-11-10 09:38:06,233 INFO RemoteOK: 59 eligible jobs
+2026-11-10 09:38:07,936 INFO Jobicy: 0 eligible jobs
+2026-11-10 09:38:10,877 INFO Arbeitnow: 7 eligible jobs
+2026-11-10 09:38:12,525 INFO WeWorkRemotely: 23 eligible jobs
+2026-11-10 09:38:14,377 INFO MyJobMag: 14 data-engineer listings
+2026-11-10 09:38:15,435 INFO Ashby people-data-labs: 5 eligible jobs
+2026-11-10 09:38:16,778 INFO Ashby oyster: 6 eligible jobs
+2026-11-10 09:38:17,750 INFO Ashby revenuebase-inc: 4 eligible jobs
+2026-11-10 09:38:19,789 INFO Ashby supabase: 67 eligible jobs
+2026-11-10 09:38:22,603 INFO Ashby notion: 0 eligible jobs
+2026-11-10 09:38:23,873 INFO Ashby zapier: 4 eligible jobs
+2026-11-10 09:38:28,196 INFO Greenhouse canonical: 195 eligible jobs
+2026-11-10 09:38:32,386 INFO Greenhouse gitlab: 35 eligible jobs
+2026-11-10 09:38:37,716 INFO Greenhouse elastic: 1 eligible jobs
+2026-11-10 09:38:42,137 INFO Greenhouse fivetran: 22 eligible jobs
+2026-11-10 09:38:46,170 INFO Greenhouse mongodb: 0 eligible jobs
+2026-11-10 09:38:48,191 INFO Greenhouse moniepoint: 44 eligible jobs
+2026-11-10 09:38:52,921 INFO Greenhouse stripe: 27 eligible jobs
+2026-11-10 09:38:56,744 INFO Greenhouse datadog: 4 eligible jobs
+2026-11-10 09:38:56,750 INFO Marked 42 jobs as applied in C:\Users\THINKBOOK\Documents\custom ai\tracking.json
+2026-11-10 09:38:56,750 INFO Selected 0 remote jobs and 0 Kenya jobs (min score 55); 42 remembered
+2026-11-10 09:38:56,753 INFO Report written to C:\Users\THINKBOOK\Documents\custom ai\reports\jobs-2026-11-10.html
+2026-11-10 09:38:56,753 INFO Done

@@ -1,0 +1,382 @@
+{
+  "jobs": {
+    "seniordataengineerpeopledatalabs": {
+      "company": "People Data Labs",
+      "title": "Senior Data Engineer",
+      "url": "https://jobs.ashbyhq.com/people-data-labs/ebb9e70d-595b-4e4e-ad5a-9425abd7abe6",
+      "location": "Remote",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineerpeopledatalabs": {
+      "company": "People Data Labs",
+      "title": "Data Engineer",
+      "url": "https://jobs.ashbyhq.com/people-data-labs/98b60e46-4da9-4ca5-8e11-676b23e950c6",
+      "location": "Remote",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "seniorsoftwareengineerdataacquisitionpeopledatalabs": {
+      "company": "People Data Labs",
+      "title": "Senior Software Engineer, Data Acquisition ",
+      "url": "https://jobs.ashbyhq.com/people-data-labs/5108aa65-f7cc-4d41-92fe-a3a5373d705d",
+      "location": "Remote",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineerrevenuebase": {
+      "company": "RevenueBase",
+      "title": "Data Engineer",
+      "url": "https://jobs.ashbyhq.com/revenuebase-inc/1a9f2caa-d293-4297-a90d-8162e0f7972e",
+      "location": "Remote",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "finopsdataengineersupabase": {
+      "company": "Supabase",
+      "title": "FinOps Data Engineer ",
+      "url": "https://jobs.ashbyhq.com/supabase/73ddf93b-fe0c-455d-ba27-cdde0d3fb94f",
+      "location": "Remote, Global",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "softwareengineerdatainfrastructurekafkacanonicalubuntu": {
+      "company": "Canonical (Ubuntu)",
+      "title": "Software Engineer - Data Infrastructure - Kafka",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/5218601",
+      "location": "Home based - EMEA",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "pythonandkubernetessoftwareengineerdataworkflowsaimlanalyticscanonicalubuntu": {
+      "company": "Canonical (Ubuntu)",
+      "title": "Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/5703396",
+      "location": "Home based - Worldwide",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "softwareengineerdatainfrastructurecanonicalubuntu": {
+      "company": "Canonical (Ubuntu)",
+      "title": "Software Engineer - Data Infrastructure ",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/3014391",
+      "location": "Home based - EMEA",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "principalsoftwareengineerdatalakesfivetran": {
+      "company": "Fivetran",
+      "title": "Principal Software Engineer - Data Lakes",
+      "url": "https://www.fivetran.com/careers/job?gh_jid=7771684003",
+      "location": "Remote, Germany, EMEA",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "softwareengineerdataplatformvercel": {
+      "company": "Vercel",
+      "title": "Software Engineer - Data Platform",
+      "url": "https://weworkremotely.com/remote-jobs/vercel-software-engineer-data-platform",
+      "location": "Anywhere in the World",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "softwareengineerdatainfrastructureopensearchelasticsearchcanonicalubuntu": {
+      "company": "Canonical (Ubuntu)",
+      "title": "Software Engineer - Data Infrastructure - OpenSearch/ElasticSearch",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/5002072",
+      "location": "Home based - EMEA",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "engineeringmanagerdataplatformcanonicalubuntu": {
+      "company": "Canonical (Ubuntu)",
+      "title": "Engineering Manager - Data Platform",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/5667860",
+      "location": "Home based - Worldwide",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "leaddatagovernanceengineercanonicalubuntu": {
+      "company": "Canonical (Ubuntu)",
+      "title": "Lead Data Governance Engineer",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/6394147",
+      "location": "Home based - EMEA",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataapiengineersupabase": {
+      "company": "Supabase",
+      "title": "Data API Engineer",
+      "url": "https://jobs.ashbyhq.com/supabase/950e8ffc-79a5-4626-b1dd-115fcbcddad0",
+      "location": "Remote, Global",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "engineeringdirectorbusinessdatacanonicalubuntu": {
+      "company": "Canonical (Ubuntu)",
+      "title": "Engineering Director - Business Data",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/7646448",
+      "location": "Home based - EMEA",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "aiengineerdataapisbenzinga": {
+      "company": "Benzinga",
+      "title": "AI Engineer Data APIs",
+      "url": "https://remoteOK.com/remote-jobs/remote-ai-engineer-data-apis-benzinga-1137224",
+      "location": "Remote",
+      "category": "remote",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineercooperativebankofkenya": {
+      "company": "Co-operative Bank of Kenya",
+      "title": "Data Engineer",
+      "url": "https://www.co-opbank.co.ke/careers/co-op-bank/data-engineer-8",
+      "location": "Nairobi",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "aidataarchitectstretchcooperativebankofkenya": {
+      "company": "Co-operative Bank of Kenya",
+      "title": "AI & Data Architect (stretch)",
+      "url": "https://www.myjobmag.co.ke/jobs/job-vacancies-at-co-operative-bank-of-kenya-5",
+      "location": "Nairobi",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineercloudfactory": {
+      "company": "CloudFactory",
+      "title": "Data Engineer",
+      "url": "https://jobs.workable.com/view/wNZcnoNYXfdd82ETt9imXs/hybrid-data-engineer-in-nairobi-at-cloudfactory",
+      "location": "Nairobi",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineerremotekenyateamprospect33": {
+      "company": "Prospect 33",
+      "title": "Data Engineer (remote Kenya team)",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Prospect%2033%20data%20engineer%20Kenya",
+      "location": "Remote — Kenya",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineerdataaiacceleradigitalgroup": {
+      "company": "Accelera Digital Group",
+      "title": "Data Engineer — Data & AI",
+      "url": "https://www.brightermonday.co.ke/listings/data-engineer-45dzzr",
+      "location": "Nairobi",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataarchitectkcbbankkenya": {
+      "company": "KCB Bank Kenya",
+      "title": "Data Architect",
+      "url": "https://www.myjobmag.co.ke/job/data-architect-kcb-bank-kenya-1",
+      "location": "Nairobi",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineerstanbicbankkenya": {
+      "company": "Stanbic Bank Kenya",
+      "title": "Data Engineer",
+      "url": "https://openedcareer.com/job/data-engineer-at-stanbic-bank-kenya/",
+      "location": "Nairobi",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineeranalyticsengineerwatucredit": {
+      "company": "Watu Credit",
+      "title": "Data Engineer / Analytics Engineer",
+      "url": "https://builtin.com/job/data-engineer/11373209",
+      "location": "Nairobi / remote",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "datamanageradjacentkemri": {
+      "company": "KEMRI",
+      "title": "Data Manager (adjacent)",
+      "url": "https://joballer.com/it-technology-jobs",
+      "location": "Nairobi",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "assistantmanagerdatascientistadjacentimbank": {
+      "company": "I&M Bank",
+      "title": "Assistant Manager, Data Scientist (adjacent)",
+      "url": "https://www.corporatestaffing.co.ke/category/banking-jobs-in-kenya/",
+      "location": "Nairobi",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataplatformroleswatch6openmkopa": {
+      "company": "M-KOPA",
+      "title": "Data & platform roles — watch (6 open)",
+      "url": "https://www.m-kopa.com/careers/",
+      "location": "Nairobi / remote",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineeringroleswatchsafaricommpesaafrica": {
+      "company": "Safaricom / M-PESA Africa",
+      "title": "Data engineering roles — watch",
+      "url": "https://www.safaricom.co.ke/careers",
+      "location": "Nairobi",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineerwatchkenyaairways": {
+      "company": "Kenya Airways",
+      "title": "Data Engineer — watch",
+      "url": "https://careers.kenya-airways.com",
+      "location": "Nairobi",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineeringroleswatchcellulant": {
+      "company": "Cellulant",
+      "title": "Data engineering roles — watch",
+      "url": "https://www.cellulant.io/open-roles",
+      "location": "Nairobi",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineerandanalyticsspecialistvictoryfarms": {
+      "company": "Victory Farms",
+      "title": "Data Engineer and Analytics Specialist",
+      "url": "https://www.myjobmag.co.ke/job/data-engineer-and-analytics-specialist-victory-farms-1",
+      "location": "Kenya",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineerdatabrickssnowflakeandishi": {
+      "company": "Andishi",
+      "title": "Data Engineer( DataBricks & Snowflake)",
+      "url": "https://www.myjobmag.co.ke/job/data-engineer-databricks-snowflake-andishi",
+      "location": "Kenya",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineeracceleradigitalgroup": {
+      "company": "Accelera Digital Group",
+      "title": "Data Engineer",
+      "url": "https://www.myjobmag.co.ke/job/data-engineer-accelera-digital-group",
+      "location": "Kenya",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "seniordataengineerdatabrickssnowflakeandishi": {
+      "company": "Andishi",
+      "title": "Senior Data Engineer( DataBricks & Snowflake)",
+      "url": "https://www.myjobmag.co.ke/job/senior-data-engineer-databricks-snowflake-andishi",
+      "location": "Kenya",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineerstandardbankgroup": {
+      "company": "Standard Bank Group",
+      "title": "Data Engineer",
+      "url": "https://www.myjobmag.co.ke/job/data-engineer-standard-bank-group-4",
+      "location": "Kenya",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineermoringaschool": {
+      "company": "Moringa School",
+      "title": "Data Engineer",
+      "url": "https://www.myjobmag.co.ke/job/data-engineer-moringa-school",
+      "location": "Kenya",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineerwatucreditlimited": {
+      "company": "Watu Credit Limited",
+      "title": "Data Engineer",
+      "url": "https://www.myjobmag.co.ke/job/data-engineer-watu-credit-limited",
+      "location": "Kenya",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineerkenyaairways": {
+      "company": "Kenya Airways",
+      "title": "Data Engineer",
+      "url": "https://www.myjobmag.co.ke/job/data-engineer-kenya-airways-1",
+      "location": "Kenya",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineeranalyticstalentsafari": {
+      "company": "Talent Safari",
+      "title": "Data Engineer: Analytics",
+      "url": "https://www.myjobmag.co.ke/job/data-engineer-analytics-talent-safari",
+      "location": "Kenya",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineerinkomoko": {
+      "company": "Inkomoko",
+      "title": "Data Engineer",
+      "url": "https://www.myjobmag.co.ke/job/data-engineer-inkomoko",
+      "location": "Kenya",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "dataengineerazuredatabricksexecafricarecruitmentlimited": {
+      "company": "Execafrica Recruitment Limited",
+      "title": "Data Engineer (Azure Databricks)",
+      "url": "https://www.myjobmag.co.ke/job/data-engineer-azure-databricks-execafrica-recruitment-limited",
+      "location": "Kenya",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    },
+    "managerdataengineerdatainnovationofficeagakhanuniversityhospital": {
+      "company": "Aga Khan University Hospital",
+      "title": "Manager, Data Engineer, Data Innovation Office",
+      "url": "https://www.myjobmag.co.ke/job/manager-data-engineer-data-innovation-office-aga-khan-university-hospital",
+      "location": "Kenya",
+      "category": "kenya",
+      "status": "applied",
+      "marked": "2026-11-10"
+    }
+  }
+}

@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evans Langat — Data Engineer Job Shortlist (Nov 2026)</title>
+<style>
+  :root {
+    --bg: #f4f6fb;
+    --card: #ffffff;
+    --ink: #111827;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --brand: #0f766e;
+    --brand-dark: #134e4a;
+    --accent: #4f46e5;
+    --green: #15803d;
+    --green-bg: #dcfce7;
+    --amber: #b45309;
+    --amber-bg: #fef3c7;
+    --blue: #1d4ed8;
+    --blue-bg: #dbeafe;
+    --red: #b91c1c;
+    --red-bg: #fee2e2;
+    --purple: #6d28d9;
+    --purple-bg: #ede9fe;
+    --gray-bg: #f3f4f6;
+    --shadow: 0 1px 2px rgba(16,24,40,.06), 0 8px 24px rgba(16,24,40,.06);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .hero {
+    background: radial-gradient(1200px 400px at 20% -10%, #1e3a8a 0%, transparent 60%),
+                linear-gradient(135deg, #0b1220 0%, #0f2a3a 55%, #134e4a 100%);
+    color: #fff;
+    padding: 48px 24px 36px;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+    color: #99f6e4; font-weight: 700;
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #2dd4bf; display: inline-block; }
+  .hero h1 { font-size: clamp(28px, 4vw, 44px); margin: 12px 0 8px; line-height: 1.1; letter-spacing: -.02em; }
+  .hero h1 span { color: #5eead4; }
+  .hero p.sub { color: #cbd5e1; max-width: 780px; font-size: 16px; margin: 0 0 20px; }
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 13.5px; color: #e2e8f0; }
+  .hero-meta strong { color: #fff; }
+  .hero-actions { margin-top: 22px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #14b8a6; color: #042f2e; font-weight: 700;
+    border: 0; border-radius: 10px; padding: 10px 16px; font-size: 14px;
+    cursor: pointer; transition: transform .15s ease, background .15s ease;
+  }
+  .btn:hover { background: #2dd4bf; transform: translateY(-1px); text-decoration: none; }
+  .btn.ghost { background: rgba(255,255,255,.08); color: #fff; border: 1px solid rgba(255,255,255,.22); }
+  .btn.ghost:hover { background: rgba(255,255,255,.16); }
+
+  .stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: -26px auto 0; position: relative; z-index: 2;
+  }
+  .stat {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 16px 18px; box-shadow: var(--shadow);
+  }
+  .stat .n { font-size: 26px; font-weight: 800; letter-spacing: -.02em; }
+  .stat .l { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+
+  main { padding: 34px 24px 60px; }
+  section { margin-top: 38px; scroll-margin-top: 90px; }
+  .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+  .section-head h2 { font-size: 23px; margin: 0; letter-spacing: -.02em; }
+  .section-head p { margin: 4px 0 0; color: var(--muted); font-size: 14px; max-width: 760px; }
+
+  .toolbar {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(244,246,251,.92); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 24px;
+  }
+  .toolbar-inner { max-width: 1180px; margin: 0 auto; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .chip {
+    border: 1px solid var(--line); background: #fff; color: #374151;
+    border-radius: 999px; padding: 7px 13px; font-size: 13px; font-weight: 600; cursor: pointer;
+    transition: all .15s ease;
+  }
+  .chip:hover { border-color: #9ca3af; }
+  .chip.active { background: var(--brand-dark); border-color: var(--brand-dark); color: #fff; }
+  .search {
+    margin-left: auto; min-width: 240px; flex: 1 1 240px; max-width: 340px;
+    border: 1px solid var(--line); background: #fff; border-radius: 999px;
+    padding: 8px 14px; font-size: 13.5px; color: var(--ink); outline: none;
+  }
+  .search:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(15,118,110,.14); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 18px; box-shadow: var(--shadow); display: flex; flex-direction: column;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 2px 4px rgba(16,24,40,.06), 0 14px 30px rgba(16,24,40,.10); }
+  .card.hidden { display: none; }
+  .card-top { display: flex; gap: 12px; align-items: flex-start; }
+  .logo {
+    width: 42px; height: 42px; border-radius: 11px; flex: 0 0 42px;
+    display: grid; place-items: center; font-weight: 800; font-size: 16px; color: #fff;
+    background: linear-gradient(135deg, #0f766e, #0e7490);
+  }
+  .co { font-size: 12.5px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+  .role { font-size: 16.5px; font-weight: 800; letter-spacing: -.01em; margin: 2px 0 0; line-height: 1.25; }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; }
+  .badge {
+    font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 999px;
+    letter-spacing: .02em; white-space: nowrap;
+  }
+  .b-remote { background: var(--green-bg); color: var(--green); }
+  .b-hybrid { background: var(--amber-bg); color: var(--amber); }
+  .b-onsite { background: var(--blue-bg); color: var(--blue); }
+  .b-world { background: var(--purple-bg); color: var(--purple); }
+  .b-salary { background: #e0f2fe; color: #075985; }
+  .b-urgent { background: var(--red-bg); color: var(--red); }
+  .b-watch { background: var(--gray-bg); color: #4b5563; }
+  .meta { margin: 10px 0 0; font-size: 12.5px; color: var(--muted); display: grid; gap: 3px; }
+  .meta b { color: #374151; font-weight: 600; }
+  .match { margin: 14px 0 0; }
+  .match-row { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+  .bar { height: 7px; background: #eef2f7; border-radius: 999px; margin-top: 6px; overflow: hidden; }
+  .bar > i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #0f766e, #2dd4bf); }
+  .why { margin: 12px 0 0; padding: 0 0 0 18px; font-size: 13px; color: #374151; }
+  .why li { margin: 4px 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; }
+  .tag { font-size: 11px; background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; border-radius: 6px; padding: 2px 7px; }
+  .card-foot { margin-top: auto; padding-top: 14px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .apply {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--brand-dark); color: #fff; font-weight: 700; font-size: 13px;
+    padding: 8px 13px; border-radius: 9px;
+  }
+  .apply:hover { background: var(--brand); text-decoration: none; }
+  .source { font-size: 11.5px; color: var(--muted); }
+
+  .note {
+    background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--brand);
+    border-radius: 12px; padding: 14px 16px; font-size: 13.5px; color: #374151; margin: 14px 0 0;
+  }
+  .note b { color: var(--ink); }
+
+  table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); }
+  th, td { text-align: left; padding: 11px 13px; font-size: 13px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: #f8fafc; font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; color: #475569; }
+  tr:last-child td { border-bottom: 0; }
+  td .small { color: var(--muted); font-size: 12px; }
+
+  .pipe-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+  .pipe {
+    background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 13px 14px;
+    box-shadow: var(--shadow);
+  }
+  .pipe a { font-weight: 700; font-size: 13.5px; }
+  .pipe p { margin: 4px 0 0; font-size: 12.5px; color: var(--muted); }
+
+  .two-col { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+  @media (max-width: 860px) { .two-col { grid-template-columns: 1fr; } }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); }
+  .panel h3 { margin: 0 0 10px; font-size: 16px; }
+  .panel ol, .panel ul { margin: 0; padding-left: 20px; font-size: 13.5px; color: #374151; }
+  .panel li { margin: 7px 0; }
+
+  footer { border-top: 1px solid var(--line); background: #fff; padding: 26px 24px; color: var(--muted); font-size: 12.5px; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  @media print {
+    .toolbar, .hero-actions, .search { display: none !important; }
+    body { background: #fff; }
+    .card, .panel, table { box-shadow: none; }
+    .card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> Personal job shortlist · generated 8 November 2026</div>
+    <h1>Evans Langat — <span>Data Engineer</span> opportunities</h1>
+    <p class="sub">Curated from your CV: 4.5+ years in ETL/ELT, Databricks, PySpark, Apache Airflow, dbt, Snowflake, Kafka, AWS and Terraform. Remote-worldwide roles below are open to candidates outside the US/EU where stated; Kenya roles include remote, hybrid and onsite options.</p>
+    <div class="hero-meta">
+      <span><strong>Based in:</strong> Kenya</span>
+      <span><strong>Target:</strong> Data Engineer / Analytics Engineer / Data Platform Engineer</span>
+      <span><strong>Core stack:</strong> Python · SQL · Databricks · Airflow · dbt · Snowflake · AWS · Kafka</span>
+    </div>
+    <div class="hero-actions">
+      <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+      <a class="btn ghost" href="#remote">Remote worldwide</a>
+      <a class="btn ghost" href="#kenya">Kenya roles</a>
+      <a class="btn ghost" href="#linkedin">LinkedIn map</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="n">21</div><div class="l">Remote-worldwide roles shortlisted</div></div>
+    <div class="stat"><div class="n">10</div><div class="l">Live Kenya roles (remote / hybrid / onsite)</div></div>
+    <div class="stat"><div class="n">27</div><div class="l">Kenyan data engineers mapped on LinkedIn</div></div>
+    <div class="stat"><div class="n">30+</div><div class="l">Companies &amp; talent pipelines to monitor</div></div>
+  </div>
+</div>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <button class="chip active" data-filter="all">All roles</button>
+    <button class="chip" data-filter="remote">Remote worldwide</button>
+    <button class="chip" data-filter="kenya">Kenya</button>
+    <button class="chip" data-filter="watch">Watchlist</button>
+    <input class="search" id="search" type="search" placeholder="Search company, skill, city…" aria-label="Search jobs">
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- REMOTE WORLDWIDE -->
+  <section id="remote">
+    <div class="section-head">
+      <div>
+        <h2>Remote — worldwide / Kenya-eligible</h2>
+        <p>These listings explicitly allow remote work from multiple countries, or are global talent marketplaces. Always confirm the country list on the application page before investing time.</p>
+      </div>
+    </div>
+
+    <div class="grid" id="remote-grid">
+
+      <article class="card" data-cat="remote" data-text="people data labs data engineer remote worldwide python spark sql databricks aws airflow kafka">
+        <div class="card-top">
+          <div class="logo">PDL</div>
+          <div>
+            <div class="co">People Data Labs</div>
+            <h3 class="role">Data Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Worldwide</span>
+          <span class="badge b-salary">$180K–$220K</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Python, Spark, SQL, Databricks, AWS, orchestration</span>
+          <span><b>Level:</b> 3–5+ years data engineering</span>
+          <span><b>Status:</b> Live on company careers page (Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>90%</span></div>
+          <div class="bar"><i style="width:90%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Your Databricks + PySpark + Spark batch/streaming work maps directly.</li>
+          <li>Kafka and Airflow are listed as bonus skills — you have both.</li>
+          <li>Remote-first company; salary band is unusually transparent.</li>
+        </ul>
+        <div class="tags"><span class="tag">Databricks</span><span class="tag">PySpark</span><span class="tag">Kafka</span><span class="tag">AWS</span><span class="tag">Remote anywhere</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://jobs.ashbyhq.com/people-data-labs/98b60e46-4da9-4ca5-8e11-676b23e950c6" target="_blank" rel="noopener">Apply on Ashby ↗</a>
+          <span class="source">Source: PDL careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="people data labs senior data engineer remote worldwide python spark sql databricks aws airflow kafka">
+        <div class="card-top">
+          <div class="logo">PDL</div>
+          <div>
+            <div class="co">People Data Labs</div>
+            <h3 class="role">Senior Data Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Worldwide</span>
+          <span class="badge b-salary">$200K–$220K</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Python, Spark, SQL, Databricks, AWS, entity resolution</span>
+          <span><b>Level:</b> 5–7+ years (stretch — apply if you can show depth)</span>
+          <span><b>Status:</b> Live on company careers page (Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>82%</span></div>
+          <div class="bar"><i style="width:82%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Same core stack as your Griffin Global Tech role (Databricks, Spark, AWS).</li>
+          <li>Ownership of ingestion, transformation, entity resolution and data quality.</li>
+          <li>Apply alongside the mid-level role — one pipeline, two shots.</li>
+        </ul>
+        <div class="tags"><span class="tag">Spark</span><span class="tag">Databricks</span><span class="tag">Data quality</span><span class="tag">Kafka</span><span class="tag">Remote anywhere</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://jobs.ashbyhq.com/people-data-labs/ebb9e70d-595b-4e4e-ad5a-9425abd7abe6" target="_blank" rel="noopener">Apply on Ashby ↗</a>
+          <span class="source">Source: PDL careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="oyster senior data engineer ai platform remote kenya emea snowflake aws dbt airflow databricks">
+        <div class="card-top">
+          <div class="logo">OY</div>
+          <div>
+            <div class="co">Oyster</div>
+            <h3 class="role">Senior Data Engineer — AI Platform</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Kenya explicitly eligible</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> AWS, Snowflake, Databricks, dbt, Airflow, Python, SQL</span>
+          <span><b>Level:</b> 5+ years data/platform/backend engineering</span>
+          <span><b>Timezone:</b> must sit within UTC−6 to UTC+3 (Kenya is UTC+3)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>88%</span></div>
+          <div class="bar"><i style="width:88%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Location list includes Kenya — rare for a global product company.</li>
+          <li>Explicitly asks for Snowflake, Databricks, dbt or Airflow experience.</li>
+          <li>Your CDC/EventBridge/Salesforce integration work is relevant to AI data pipelines.</li>
+        </ul>
+        <div class="tags"><span class="tag">Kenya eligible</span><span class="tag">Snowflake</span><span class="tag">AWS</span><span class="tag">dbt</span><span class="tag">Airflow</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://jobs.ashbyhq.com/oyster/7c2d418d-d817-4e9f-b73c-41fa5f6549af" target="_blank" rel="noopener">Apply on Ashby ↗</a>
+          <span class="source">Source: Oyster careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="addepto data engineer snowflake worldwide airflow dbt spark aws python">
+        <div class="card-top">
+          <div class="logo">AD</div>
+          <div>
+            <div class="co">Addepto</div>
+            <h3 class="role">Data Engineer (Snowflake)</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">All countries</span>
+          <span class="badge b-urgent">Apply by 2 Dec 2026</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Snowflake, Airflow, dbt, Spark, AWS, Python</span>
+          <span><b>Level:</b> 4+ years, senior</span>
+          <span><b>Status:</b> Live on Himalayas (posted Oct 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>90%</span></div>
+          <div class="bar"><i style="width:90%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Near-perfect keyword overlap: Snowflake + Airflow + dbt + Spark + AWS.</li>
+          <li>Consulting-style delivery matches your Griffin/Dynasoft project work.</li>
+          <li>Open to candidates from all countries.</li>
+        </ul>
+        <div class="tags"><span class="tag">Snowflake</span><span class="tag">dbt</span><span class="tag">Airflow</span><span class="tag">Spark</span><span class="tag">Worldwide</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://himalayas.app/companies/addepto/jobs/data-engineer-snowflake" target="_blank" rel="noopener">View &amp; apply ↗</a>
+          <span class="source">Source: Himalayas</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="addepto data engineer databricks airflow dbt spark azure python remote">
+        <div class="card-top">
+          <div class="logo">AD</div>
+          <div>
+            <div class="co">Addepto</div>
+            <h3 class="role">Data Engineer (Databricks)</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-urgent">Apply by 20 Nov 2026</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Databricks, Spark, PySpark, Airflow/Dagster, dbt, Python</span>
+          <span><b>Level:</b> 3+ years big-data systems</span>
+          <span><b>Note:</b> Azure is preferred — position your AWS Databricks work as transferable</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>84%</span></div>
+          <div class="bar"><i style="width:84%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Databricks + PySpark + Airflow + dbt is literally your CV stack.</li>
+          <li>Data governance and MLOps exposure are a plus in your background.</li>
+          <li>Second Addepto application — different team, same recruiter pool.</li>
+        </ul>
+        <div class="tags"><span class="tag">Databricks</span><span class="tag">PySpark</span><span class="tag">Airflow</span><span class="tag">dbt</span><span class="tag">Python</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://himalayas.app/companies/addepto/jobs/data-engineer-databricks" target="_blank" rel="noopener">View &amp; apply ↗</a>
+          <span class="source">Source: Himalayas</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="canonical lead data governance engineer remote emea python sql data quality airbyte trino">
+        <div class="card-top">
+          <div class="logo">CA</div>
+          <div>
+            <div class="co">Canonical (Ubuntu)</div>
+            <h3 class="role">Lead Data Governance Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">EMEA (Kenya eligible)</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Python, SQL, data quality/governance, Airbyte, Trino, Ranger</span>
+          <span><b>Level:</b> Senior/lead — governance-heavy</span>
+          <span><b>Status:</b> Posted 4 Nov 2026</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>72%</span></div>
+          <div class="bar"><i style="width:72%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Your dbt tests, source validations and data-quality rules are the core of this role.</li>
+          <li>Canonical has been remote-first since 2004 and hires across EMEA.</li>
+          <li>Good bridge role if you want to move toward data governance/platform.</li>
+        </ul>
+        <div class="tags"><span class="tag">Data governance</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">EMEA</span><span class="tag">Remote-first</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://canonical.com/careers" target="_blank" rel="noopener">Search on Canonical careers ↗</a>
+          <span class="source">Source: Canonical careers / JobsPortal</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="canonical software engineer data infrastructure remote emea big data nosql sql python distributed systems">
+        <div class="card-top">
+          <div class="logo">CA</div>
+          <div>
+            <div class="co">Canonical (Ubuntu)</div>
+            <h3 class="role">Software Engineer — Data Infrastructure</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">EMEA (Kenya eligible)</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> big data, NoSQL, SQL engines, distributed systems, Python</span>
+          <span><b>Level:</b> Junior → Senior openings</span>
+          <span><b>Status:</b> Posted 4 Nov 2026 · apply before 4 Dec 2026</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>66%</span></div>
+          <div class="bar"><i style="width:66%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Data-platform engineering rather than analytics — leans on your Spark/Kafka/DB depth.</li>
+          <li>Fully remote EMEA with twice-yearly team sprints.</li>
+          <li>Good long-shot application; Canonical interviews heavily on fundamentals.</li>
+        </ul>
+        <div class="tags"><span class="tag">Data platforms</span><span class="tag">Big data</span><span class="tag">Python</span><span class="tag">EMEA</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://canonical.com/careers/3014391/software-engineer-data-infrastructure--remote" target="_blank" rel="noopener">Apply on Canonical ↗</a>
+          <span class="source">Source: Canonical careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="mode mobile senior data engineer global remote spark kafka aws terraform python sql">
+        <div class="card-top">
+          <div class="logo">MM</div>
+          <div>
+            <div class="co">Mode Mobile</div>
+            <h3 class="role">Sr. Data Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Global remote</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> SQL, Spark, Kafka, AWS, Terraform, Python/Scala/Java</span>
+          <span><b>Level:</b> 5+ years</span>
+          <span><b>Status:</b> Live on Matcha worldwide board</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>91%</span></div>
+          <div class="bar"><i style="width:91%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Kafka + Spark + AWS + Terraform is exactly what you do at Griffin.</li>
+          <li>Billions of daily events — matches your streaming/batch experience.</li>
+          <li>Global remote-first company.</li>
+        </ul>
+        <div class="tags"><span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">Global</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://matcha.fm/jobs/data-engineer/ww" target="_blank" rel="noopener">Find on Matcha ↗</a>
+          <span class="source">Source: Matcha worldwide board</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="zeely senior data engineer remote anywhere dbt airflow prefect sql python cdc data quality">
+        <div class="card-top">
+          <div class="logo">ZE</div>
+          <div>
+            <div class="co">Zeely</div>
+            <h3 class="role">Senior Data Engineer (first data engineer)</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Remote anywhere</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> SQL, Python, dbt, cloud DWH, Airflow/Prefect, CDC</span>
+          <span><b>Level:</b> 5+ years in data, 1.5+ as data engineer</span>
+          <span><b>Status:</b> Live on Matcha worldwide board</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>87%</span></div>
+          <div class="bar"><i style="width:87%"></i></div>
+        </div>
+        <ul class="why">
+          <li>First-DE role: your end-to-end pipeline ownership at Dynasoft is a strong story.</li>
+          <li>dbt + Airflow + CDC (you built SQS/EventBridge CDC workflows) line up.</li>
+          <li>Remote anywhere; expect broad ownership.</li>
+        </ul>
+        <div class="tags"><span class="tag">dbt</span><span class="tag">Airflow</span><span class="tag">CDC</span><span class="tag">Python</span><span class="tag">Remote anywhere</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://matcha.fm/jobs/data-engineer/ww" target="_blank" rel="noopener">Find on Matcha ↗</a>
+          <span class="source">Source: Matcha worldwide board</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="revenuebase data engineer remote python snowflake aws dbt">
+        <div class="card-top">
+          <div class="logo">RB</div>
+          <div>
+            <div class="co">RevenueBase</div>
+            <h3 class="role">Data Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-watch">Verify country eligibility</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Python, Snowflake, AWS, dbt</span>
+          <span><b>Level:</b> Mid/senior</span>
+          <span><b>Status:</b> Live on Ashby (Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>84%</span></div>
+          <div class="bar"><i style="width:84%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Snowflake + dbt + AWS + Python is your daily toolkit.</li>
+          <li>B2B data product company — data quality matters, which you already own.</li>
+          <li>Confirm the remote country list before applying.</li>
+        </ul>
+        <div class="tags"><span class="tag">Snowflake</span><span class="tag">dbt</span><span class="tag">AWS</span><span class="tag">Python</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://jobs.ashbyhq.com/revenuebase-inc/1a9f2caa-d293-4297-a90d-8162e0f7972e" target="_blank" rel="noopener">Apply on Ashby ↗</a>
+          <span class="source">Source: RevenueBase careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="turing remote data engineer global contractor python data pipelines machine learning">
+        <div class="card-top">
+          <div class="logo">TU</div>
+          <div>
+            <div class="co">Turing</div>
+            <h3 class="role">Remote Data Engineer (talent network)</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Global contractors</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Python, data pipelines, SQL, data science workflows</span>
+          <span><b>Level:</b> 3–5+ years</span>
+          <span><b>Model:</b> Vetted once, matched to US/global long-term roles</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>76%</span></div>
+          <div class="bar"><i style="width:76%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Fast way to get multiple remote data-engineering interviews.</li>
+          <li>Your Python + Spark + SQL + Airflow profile is in demand on the platform.</li>
+          <li>Use as a pipeline, not a single application.</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Remote</span><span class="tag">Contract</span><span class="tag">Global</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://www.turing.com/jobs" target="_blank" rel="noopener">Join Turing ↗</a>
+          <span class="source">Source: Turing</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="lemon.io data engineer remote contract hourly airflow aws python">
+        <div class="card-top">
+          <div class="logo">L</div>
+          <div>
+            <div class="co">Lemon.io</div>
+            <h3 class="role">Data Engineer contracts ($32–$89/hr)</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Global</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Airflow, AWS, Python, SQL, Spark, dbt</span>
+          <span><b>Level:</b> 5+ years (senior)</span>
+          <span><b>Model:</b> Vetted once, matched to funded startups</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>80%</span></div>
+          <div class="bar"><i style="width:80%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Part-time or full-time remote contracts; average 9+ months.</li>
+          <li>Your stack appears in their live data-engineering projects.</li>
+          <li>Good hedge while full-time applications are in flight.</li>
+        </ul>
+        <div class="tags"><span class="tag">Contract</span><span class="tag">Airflow</span><span class="tag">AWS</span><span class="tag">USD hourly</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://lemon.io/for-developers/data-engineer-jobs/" target="_blank" rel="noopener">Apply to Lemon.io ↗</a>
+          <span class="source">Source: Lemon.io</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="upwork databricks engineer contract remote spark pyspark sql python delta lake etl">
+        <div class="card-top">
+          <div class="logo">UW</div>
+          <div>
+            <div class="co">Upwork (client contract)</div>
+            <h3 class="role">Databricks Engineer — contract, remote</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Global freelancers</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Databricks, Spark/PySpark, SQL, Python, Delta Lake, ETL/ELT</span>
+          <span><b>Level:</b> Enterprise-scale experience preferred</span>
+          <span><b>Status:</b> Live Upwork contract posting</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>92%</span></div>
+          <div class="bar"><i style="width:92%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Direct keyword match with your Databricks + Delta Lake + PySpark work.</li>
+          <li>Flexible engagement models, potential long-term.</li>
+          <li>Use to build USD contract income and client references.</li>
+        </ul>
+        <div class="tags"><span class="tag">Databricks</span><span class="tag">Delta Lake</span><span class="tag">PySpark</span><span class="tag">Contract</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://www.upwork.com/freelance-jobs/apply/Databricks-Engineer-Contract-Remote-Long-Term-Opportunities_~022067520049641088616" target="_blank" rel="noopener">View on Upwork ↗</a>
+          <span class="source">Source: Upwork</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="imagine worldwide senior analytics engineer remote africa aws terraform dbt airflow docker linux analytics platform">
+        <div class="card-top">
+          <div class="logo">IW</div>
+          <div>
+            <div class="co">Imagine Worldwide</div>
+            <h3 class="role">Senior Analytics Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Africa — must be based in Africa</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> dbt, Airflow, AWS data services, Terraform, Docker, Linux</span>
+          <span><b>Level:</b> Senior — builds and runs the whole analytics platform</span>
+          <span><b>Status:</b> Live on Remotive (posted Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>93%</span></div>
+          <div class="bar"><i style="width:93%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Only African candidates are eligible — a rare Africa-only global role.</li>
+          <li>dbt in production + Airflow orchestration + Terraform + Docker is your exact stack.</li>
+          <li>Education non-profit; strong mission story and full remote from Kenya.</li>
+        </ul>
+        <div class="tags"><span class="tag">Africa-only</span><span class="tag">dbt</span><span class="tag">Airflow</span><span class="tag">Terraform</span><span class="tag">AWS</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://remotive.com/remote/jobs/data/senior-analytics-engineer-6353556" target="_blank" rel="noopener">View on Remotive ↗</a>
+          <span class="source">Source: Remotive</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="beehiiv data engineer global remote clickhouse streaming event data models python sql 160k 220k">
+        <div class="card-top">
+          <div class="logo">BH</div>
+          <div>
+            <div class="co">beehiiv</div>
+            <h3 class="role">Data Engineer (Global)</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Worldwide</span>
+          <span class="badge b-salary">$160K–$220K</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Python, SQL, ClickHouse, event-driven streaming, data modelling</span>
+          <span><b>Level:</b> 2–5 years</span>
+          <span><b>Status:</b> Live on DailyRemote (Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>81%</span></div>
+          <div class="bar"><i style="width:81%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Explicitly global remote with a very high salary band for your experience level.</li>
+          <li>Event-driven streaming work maps to your Kafka/SQS/EventBridge pipelines.</li>
+          <li>ClickHouse is learnable from your Snowflake/Databricks warehouse depth.</li>
+        </ul>
+        <div class="tags"><span class="tag">Worldwide</span><span class="tag">ClickHouse</span><span class="tag">Streaming</span><span class="tag">Python</span><span class="tag">USD salary</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://dailyremote.com/remote-data-engineer-jobs" target="_blank" rel="noopener">Find listing on DailyRemote ↗</a>
+          <span class="source">Source: DailyRemote</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="shuru technologies senior data engineer worldwide azure databricks pyspark sql bronze silver gold medallion">
+        <div class="card-top">
+          <div class="logo">SH</div>
+          <div>
+            <div class="co">Shuru Technologies</div>
+            <h3 class="role">Senior Data Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Worldwide</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Azure Databricks, PySpark, SQL, Bronze/Silver/Gold layers</span>
+          <span><b>Level:</b> 5–10 years (stretch — your Databricks depth carries it)</span>
+          <span><b>Status:</b> Live on DailyRemote (posted Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>88%</span></div>
+          <div class="bar"><i style="width:88%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Medallion architecture on Databricks is the core of your Griffin work.</li>
+          <li>PySpark + SQL + data quality checks are a direct keyword match.</li>
+          <li>Worldwide eligibility stated; apply even with 4.5 years — portfolio over years.</li>
+        </ul>
+        <div class="tags"><span class="tag">Databricks</span><span class="tag">PySpark</span><span class="tag">Medallion</span><span class="tag">Azure</span><span class="tag">Worldwide</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://dailyremote.com/remote-data-engineer-jobs-in-spain" target="_blank" rel="noopener">Find listing on DailyRemote ↗</a>
+          <span class="source">Source: DailyRemote</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="foundever senior data engineer worldwide databricks azure migration data pipelines global stakeholders">
+        <div class="card-top">
+          <div class="logo">FV</div>
+          <div>
+            <div class="co">Foundever</div>
+            <h3 class="role">Senior Data Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Worldwide</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Databricks, Azure, scalable pipeline design, data quality/security</span>
+          <span><b>Level:</b> 5+ years</span>
+          <span><b>Status:</b> Live on DailyRemote (Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>84%</span></div>
+          <div class="bar"><i style="width:84%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Databricks + Azure migration — frame your AWS Databricks work as platform-agnostic.</li>
+          <li>Global stakeholder collaboration matches your US-remote Griffin experience.</li>
+          <li>Large BPO/enterprise data estate; data quality and governance matter.</li>
+        </ul>
+        <div class="tags"><span class="tag">Databricks</span><span class="tag">Azure</span><span class="tag">Migration</span><span class="tag">Worldwide</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://dailyremote.com/remote-data-engineer-jobs-in-portugal" target="_blank" rel="noopener">Find listing on DailyRemote ↗</a>
+          <span class="source">Source: DailyRemote</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="lak technology cloud data engineer snowflake databricks remote worldwide sql python pipelines">
+        <div class="card-top">
+          <div class="logo">LAK</div>
+          <div>
+            <div class="co">LAK Technology</div>
+            <h3 class="role">Cloud Data Engineer (Snowflake/Databricks)</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Worldwide</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Snowflake, Databricks, SQL, Python, transformation workflows</span>
+          <span><b>Level:</b> 2–5 years</span>
+          <span><b>Status:</b> Live on DailyRemote (Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>87%</span></div>
+          <div class="bar"><i style="width:87%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Title and stack are a near-perfect match for your CV.</li>
+          <li>Explicitly 2–5 years — squarely inside your experience band.</li>
+          <li>Worldwide remote; expect a short technical screen on SQL + Spark.</li>
+        </ul>
+        <div class="tags"><span class="tag">Snowflake</span><span class="tag">Databricks</span><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Worldwide</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://dailyremote.com/remote-data-engineer-jobs-in-portugal" target="_blank" rel="noopener">Find listing on DailyRemote ↗</a>
+          <span class="source">Source: DailyRemote</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="avanda solutions data engineer databricks pyspark full remote worldwide freelance full time">
+        <div class="card-top">
+          <div class="logo">AV</div>
+          <div>
+            <div class="co">Avanda Solutions</div>
+            <h3 class="role">Data Engineer — Databricks / PySpark</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Worldwide</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Databricks, PySpark, SQL, ETL/ELT</span>
+          <span><b>Level:</b> 5–10 years (open to strong 4.5)</span>
+          <span><b>Type:</b> Freelance or full-time, fully remote</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>90%</span></div>
+          <div class="bar"><i style="width:90%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Databricks + PySpark contract — can start alongside your job search.</li>
+          <li>Freelance option gives USD income while full-time processes run.</li>
+          <li>Worldwide eligibility stated in the listing.</li>
+        </ul>
+        <div class="tags"><span class="tag">Databricks</span><span class="tag">PySpark</span><span class="tag">Freelance</span><span class="tag">Worldwide</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://dailyremote.com/remote-data-engineer-jobs-in-portugal" target="_blank" rel="noopener">Find listing on DailyRemote ↗</a>
+          <span class="source">Source: DailyRemote</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="exadel senior data engineer sql dbt remote data modelling testing documentation">
+        <div class="card-top">
+          <div class="logo">EX</div>
+          <div>
+            <div class="co">Exadel</div>
+            <h3 class="role">Senior Data Engineer (SQL, dbt)</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Global delivery</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> SQL, dbt, data modelling, testing, documentation</span>
+          <span><b>Level:</b> Senior</span>
+          <span><b>Status:</b> Live on DailyRemote (posted Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>83%</span></div>
+          <div class="bar"><i style="width:83%"></i></div>
+        </div>
+        <ul class="why">
+          <li>dbt models + tests + docs is exactly how you work at Griffin.</li>
+          <li>Consultancy model — your multi-client Dynasoft/Griffin experience fits.</li>
+          <li>Ask the recruiter about Kenya eligibility; delivery is distributed.</li>
+        </ul>
+        <div class="tags"><span class="tag">dbt</span><span class="tag">SQL</span><span class="tag">Data modelling</span><span class="tag">Consulting</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://dailyremote.com/remote-data-engineer-jobs-in-colombia" target="_blank" rel="noopener">Find listing on DailyRemote ↗</a>
+          <span class="source">Source: DailyRemote</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="muttdata senior data engineer databricks batch streaming data contracts quality remote worldwide latam">
+        <div class="card-top">
+          <div class="logo">MU</div>
+          <div>
+            <div class="co">Muttdata</div>
+            <h3 class="role">Senior Data Engineer — Databricks</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Worldwide (Latam-friendly)</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Databricks, Spark, batch + streaming, data contracts, quality rules</span>
+          <span><b>Level:</b> 5–10 years</span>
+          <span><b>Status:</b> Live on DailyRemote (Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>86%</span></div>
+          <div class="bar"><i style="width:86%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Batch + streaming pipelines on Databricks — your Griffin work verbatim.</li>
+          <li>Data contracts and quality rules mirror your dbt tests and validation work.</li>
+          <li>US-hours overlap possible from Kenya; confirm country list.</li>
+        </ul>
+        <div class="tags"><span class="tag">Databricks</span><span class="tag">Streaming</span><span class="tag">Data contracts</span><span class="tag">Worldwide</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://dailyremote.com/remote-data-engineer-jobs-in-spain" target="_blank" rel="noopener">Find listing on DailyRemote ↗</a>
+          <span class="source">Source: DailyRemote</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="note">
+      <b>Region-check before applying:</b> Imagine Worldwide is <b>Africa-only</b> — the single best eligibility fit on this page. People Data Labs, Addepto (Snowflake), beehiiv, Shuru, Foundever, LAK Technology, Avanda and Muttdata state worldwide/all-country eligibility. Oyster explicitly lists Kenya. Canonical's roles are EMEA — Kenya is included in EMEA, but confirm with the recruiter. Exadel, RevenueBase, Mode Mobile, Zeely and Upwork are remote but may still filter by country or timezone. Cross Screen Media (Python/Airflow/dbt/AWS/Snowflake) is fully remote but US-based with quarterly Virginia meetings — skip unless you can work US hours.
+    </div>
+  </section>
+
+  <!-- KENYA -->
+  <section id="kenya">
+    <div class="section-head">
+      <div>
+        <h2>Kenya — remote, hybrid &amp; onsite</h2>
+        <p>Live or recently live roles in Nairobi. Two are closing within days — apply to those first. Where a listing is a repost or has no visible deadline, verify on the employer page.</p>
+      </div>
+    </div>
+
+    <div class="grid" id="kenya-grid">
+
+      <article class="card" data-cat="kenya" data-text="co-operative bank co-op data engineer nairobi sql python scala etl pipelines data quality deadline november 9">
+        <div class="card-top">
+          <div class="logo">CB</div>
+          <div>
+            <div class="co">Co-operative Bank of Kenya</div>
+            <h3 class="role">Data Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-onsite">Nairobi</span>
+          <span class="badge b-urgent">Closes 9 Nov 2026 — tomorrow</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> SQL, Python/Scala, ETL/ELT, data quality, data security</span>
+          <span><b>Level:</b> ~4 years (matches your 4.5+)</span>
+          <span><b>Apply:</b> email CV + cover letter to jobs@co-opbank.co.ke</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>86%</span></div>
+          <div class="bar"><i style="width:86%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Explicitly asks for pipeline design, data quality controls and monitoring — all in your CV.</li>
+          <li>Banking/regulated data is a plus; your Dynasoft Salesforce/API integrations help.</li>
+          <li>Reference number <b>DE/IID/2026</b> must be in your application.</li>
+        </ul>
+        <div class="tags"><span class="tag">Banking</span><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Data quality</span><span class="tag">Urgent</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://www.co-opbank.co.ke/careers/co-op-bank/data-engineer-8" target="_blank" rel="noopener">View job &amp; apply ↗</a>
+          <span class="source">Source: Co-op Bank careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya" data-text="cloudfactory data engineer hybrid nairobi fivetran dbt snowflake python tableau quicksight">
+        <div class="card-top">
+          <div class="logo">CF</div>
+          <div>
+            <div class="co">CloudFactory</div>
+            <h3 class="role">Data Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-hybrid">Hybrid — Nairobi</span>
+          <span class="badge b-urgent">Apply now (listing until ~10 Nov)</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Fivetran, dbt, Snowflake, Python, QuickSight/Tableau</span>
+          <span><b>Level:</b> 2–4 years</span>
+          <span><b>Type:</b> Full-time contract, hybrid</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>93%</span></div>
+          <div class="bar"><i style="width:93%"></i></div>
+        </div>
+        <ul class="why">
+          <li>dbt + Snowflake + Python is the exact centre of your CV.</li>
+          <li>Your data-quality tests and source validations map to their governance requirements.</li>
+          <li>One of the strongest title/level fits in Kenya right now.</li>
+        </ul>
+        <div class="tags"><span class="tag">dbt</span><span class="tag">Snowflake</span><span class="tag">Fivetran</span><span class="tag">Python</span><span class="tag">Hybrid</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://jobs.workable.com/view/wNZcnoNYXfdd82ETt9imXs/hybrid-data-engineer-in-nairobi-at-cloudfactory" target="_blank" rel="noopener">Apply on Workable ↗</a>
+          <span class="source">Source: CloudFactory / Workable</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya" data-text="accelera digital group data engineer nairobi gcp big data databricks spark streaming 7 years">
+        <div class="card-top">
+          <div class="logo">AC</div>
+          <div>
+            <div class="co">Accelera Digital Group</div>
+            <h3 class="role">Data Engineer — Data &amp; AI practice</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-hybrid">Nairobi — hybrid/full-time</span>
+          <span class="badge b-watch">Posted 3 Nov 2026</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> GCP data stack, open-source big data, Databricks/Spark, streaming</span>
+          <span><b>Level:</b> 7+ years requested (stretch)</span>
+          <span><b>Note:</b> consulting delivery to enterprise customers</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>64%</span></div>
+          <div class="bar"><i style="width:64%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Batch + real-time pipeline experience is explicitly required — you have both.</li>
+          <li>Your Databricks/Spark/Kafka work transfers even though they lead with GCP.</li>
+          <li>Stretch on years: frame your 4.5+ years as hands-on delivery across 4 companies.</li>
+        </ul>
+        <div class="tags"><span class="tag">GCP</span><span class="tag">Big data</span><span class="tag">Spark</span><span class="tag">Streaming</span><span class="tag">Consulting</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://www.brightermonday.co.ke/listings/data-engineer-45dzzr" target="_blank" rel="noopener">View on BrighterMonday ↗</a>
+          <span class="source">Source: BrighterMonday</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya" data-text="kcb bank data architect nairobi deadline november 13 2026 data engineering governance togaf">
+        <div class="card-top">
+          <div class="logo">KCB</div>
+          <div>
+            <div class="co">KCB Bank Kenya</div>
+            <h3 class="role">Data Architect</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-onsite">Nairobi</span>
+          <span class="badge b-urgent">Closes 13 Nov 2026</span>
+        </div>
+        <div class="meta">
+          <span><b>Scope:</b> enterprise data architecture, data engineering governance, roadmaps</span>
+          <span><b>Level:</b> 7+ years technical, 5+ in data architecture (stretch)</span>
+          <span><b>Status:</b> Live on KCB careers / MyJobMag</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>52%</span></div>
+          <div class="bar"><i style="width:52%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Your pipeline + modelling + governance work is relevant, but the role is a level up.</li>
+          <li>Apply if you want to signal architecture ambition; expect TOGAF/CBAP questions.</li>
+          <li>Also watch KCB for hands-on Data Engineer roles — they hire repeatedly.</li>
+        </ul>
+        <div class="tags"><span class="tag">Banking</span><span class="tag">Architecture</span><span class="tag">Governance</span><span class="tag">Stretch</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://www.myjobmag.co.ke/job/data-architect-kcb-bank-kenya-1" target="_blank" rel="noopener">View job ↗</a>
+          <span class="source">Source: KCB / MyJobMag</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya watch" data-text="stanbic bank data engineer nairobi sql plsql spark data pipeline december 6 2026 verify deadline">
+        <div class="card-top">
+          <div class="logo">SB</div>
+          <div>
+            <div class="co">Stanbic Bank Kenya</div>
+            <h3 class="role">Data Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-onsite">Nairobi</span>
+          <span class="badge b-watch">Verify — deadlines reported 14 Oct / 6 Dec</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> SQL, PL/SQL, Spark, data pipeline &amp; workflow tools</span>
+          <span><b>Level:</b> 5+ years</span>
+          <span><b>Scope:</b> enterprise data architecture, platforms, AI engineering capability</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>78%</span></div>
+          <div class="bar"><i style="width:78%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Spark + SQL + pipeline tooling is your core; PL/SQL is the only gap to address.</li>
+          <li>Banking data platform + AI engineering direction fits your streaming/CDC experience.</li>
+          <li>Longer window than Co-op/CloudFactory — apply this week anyway.</li>
+        </ul>
+        <div class="tags"><span class="tag">Banking</span><span class="tag">Spark</span><span class="tag">SQL</span><span class="tag">PL/SQL</span><span class="tag">Data platforms</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://openedcareer.com/job/data-engineer-at-stanbic-bank-kenya/" target="_blank" rel="noopener">View job ↗</a>
+          <span class="source">Source: OpenedCareer / Stanbic</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya" data-text="watu credit data engineer analytics engineer nairobi remote sql python dbt bigquery gcp streaming">
+        <div class="card-top">
+          <div class="logo">W</div>
+          <div>
+            <div class="co">Watu Credit</div>
+            <h3 class="role">Data Engineer / Analytics Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote / Nairobi HQ</span>
+          <span class="badge b-watch">Reposted — verify</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> advanced SQL, Python, dbt, data warehousing, streaming, GCP/BigQuery</span>
+          <span><b>Level:</b> 3+ years data/back-end engineering</span>
+          <span><b>Note:</b> earlier posting closed 2 Nov; Built In shows a fresh repost</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>86%</span></div>
+          <div class="bar"><i style="width:86%"></i></div>
+        </div>
+        <ul class="why">
+          <li>dbt + SQL + Python + streaming — strong overlap.</li>
+          <li>Fintech scale-up; your pipeline ownership and data-quality work fit.</li>
+          <li>GCP is a gap: emphasise cloud-agnostic pipeline design and fast ramp-up.</li>
+        </ul>
+        <div class="tags"><span class="tag">dbt</span><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Fintech</span><span class="tag">Remote</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://builtin.com/job/data-engineer/11373209" target="_blank" rel="noopener">View on Built In ↗</a>
+          <span class="source">Source: Built In / Watu</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya watch" data-text="m-kopa data analytics credit analytics backend c# .net azure microservices nairobi remote careers watch">
+        <div class="card-top">
+          <div class="logo">MK</div>
+          <div>
+            <div class="co">M-KOPA</div>
+            <h3 class="role">Data &amp; platform roles — watch (6 open)</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote / hybrid</span>
+          <span class="badge b-watch">6 open roles — no DE title today</span>
+        </div>
+        <div class="meta">
+          <span><b>Current:</b> 6 open incl. backend C#/.NET microservices on Azure; Senior Manager, Credit &amp; Analytics</span>
+          <span><b>Why watch:</b> large Nairobi data team; recurring engineering openings</span>
+          <span><b>Fit:</b> your C# + Azure + event-driven background matches their platform roles</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>76%</span></div>
+          <div class="bar"><i style="width:76%"></i></div>
+        </div>
+        <ul class="why">
+          <li>M-KOPA runs a sizeable data organisation in Nairobi and hires remotely.</li>
+          <li>Their C#/.NET Azure microservices role is a rare direct match for your C# background.</li>
+          <li>Set a job alert; data engineering roles appear periodically.</li>
+        </ul>
+        <div class="tags"><span class="tag">Fintech</span><span class="tag">C#/.NET</span><span class="tag">Azure</span><span class="tag">Data team</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://www.m-kopa.com/careers/" target="_blank" rel="noopener">M-KOPA careers ↗</a>
+          <span class="source">Source: M-KOPA careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya watch" data-text="safaricom m-pesa africa senior data architect hybrid nairobi careers watch">
+        <div class="card-top">
+          <div class="logo">SF</div>
+          <div>
+            <div class="co">Safaricom / M-PESA Africa</div>
+            <h3 class="role">Data engineering &amp; architecture roles — watch</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-hybrid">Hybrid — Nairobi</span>
+          <span class="badge b-watch">Recent role closed 12 Oct</span>
+        </div>
+        <div class="meta">
+          <span><b>Recent:</b> M-PESA Africa Senior Data Architect (hybrid) — closed</span>
+          <span><b>Why watch:</b> Safaricom hires data engineers (Big Data/CVM) repeatedly</span>
+          <span><b>Fit:</b> Spark, Kafka, Airflow, AWS, large-scale pipelines</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>80%</span></div>
+          <div class="bar"><i style="width:80%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Several Kenyan data engineers on LinkedIn work at Safaricom in Big Data/CVM.</li>
+          <li>Your Kafka + Spark + AWS profile is a natural fit for telco-scale data.</li>
+          <li>Check the careers page weekly; roles close fast.</li>
+        </ul>
+        <div class="tags"><span class="tag">Telco</span><span class="tag">Big data</span><span class="tag">Kafka</span><span class="tag">Spark</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://www.safaricom.co.ke/careers" target="_blank" rel="noopener">Safaricom careers ↗</a>
+          <span class="source">Source: Safaricom careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya watch" data-text="kenya airways data engineer nairobi airflow aws azure careers watch">
+        <div class="card-top">
+          <div class="logo">KQ</div>
+          <div>
+            <div class="co">Kenya Airways</div>
+            <h3 class="role">Data Engineer — watch</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-onsite">Nairobi</span>
+          <span class="badge b-watch">Last posting closed 23 Sep 2026</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Python, SQL, AWS/Azure, Airflow, data warehousing</span>
+          <span><b>Level:</b> 3+ years</span>
+          <span><b>Why watch:</b> airline data team is actively building analytics/AI capability</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>85%</span></div>
+          <div class="bar"><i style="width:85%"></i></div>
+        </div>
+        <ul class="why">
+          <li>The last Data Engineer spec matched you almost exactly (Airflow, Python, SQL, cloud).</li>
+          <li>They also hired a Head of Data, Analytics &amp; AI — team is expanding.</li>
+          <li>Set an alert on the KQ careers portal.</li>
+        </ul>
+        <div class="tags"><span class="tag">Aviation</span><span class="tag">Airflow</span><span class="tag">Python</span><span class="tag">AWS/Azure</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://careers.kenya-airways.com" target="_blank" rel="noopener">KQ careers ↗</a>
+          <span class="source">Source: Kenya Airways careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya watch" data-text="cellulant data engineer nairobi fintech careers watch open roles">
+        <div class="card-top">
+          <div class="logo">CE</div>
+          <div>
+            <div class="co">Cellulant</div>
+            <h3 class="role">Data engineering roles — watch</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-hybrid">Hybrid — Nairobi</span>
+          <span class="badge b-watch">No DE role live today</span>
+        </div>
+        <div class="meta">
+          <span><b>Current:</b> 9 open roles — finance, audit, sales, SRE, support</span>
+          <span><b>Why watch:</b> Principal + Data Engineer roles exist in the team</span>
+          <span><b>Fit:</b> AWS DMS/Glue/Airflow/Redshift-style payment data</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>75%</span></div>
+          <div class="bar"><i style="width:75%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Cellulant's data engineers use AWS DMS, Glue, Airflow and Python — your stack.</li>
+          <li>Payments data at scale; CDC and streaming experience is relevant.</li>
+          <li>Follow the team on LinkedIn and watch the open-roles page.</li>
+        </ul>
+        <div class="tags"><span class="tag">Fintech</span><span class="tag">Payments</span><span class="tag">AWS</span><span class="tag">Airflow</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://www.cellulant.io/open-roles" target="_blank" rel="noopener">Cellulant open roles ↗</a>
+          <span class="source">Source: Cellulant careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya" data-text="prospect 33 remote data engineer kenya loans enablement platform us bank sql python etl">
+        <div class="card-top">
+          <div class="logo">P33</div>
+          <div>
+            <div class="co">Prospect 33</div>
+            <h3 class="role">Data Engineer — remote Kenya team</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote — Kenya</span>
+          <span class="badge b-urgent">New — expanding team</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> SQL, Python, ETL, data platforms (Loans Enablement Platform)</span>
+          <span><b>Client:</b> Tier 1 US bank; distributed Kenya-based engineering team</span>
+          <span><b>Status:</b> Announced on LinkedIn (Nov 2026) — apply via careers page</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>85%</span></div>
+          <div class="bar"><i style="width:85%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Explicitly hiring a remote team in Kenya — no relocation, no timezone mismatch.</li>
+          <li>US bank data platform work matches your regulated-data and pipeline experience.</li>
+          <li>Act fast: team is being built now, so early applicants shape the hiring bar.</li>
+        </ul>
+        <div class="tags"><span class="tag">Remote Kenya</span><span class="tag">US bank</span><span class="tag">SQL</span><span class="tag">Python</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://www.linkedin.com/jobs/search/?keywords=Prospect%2033%20data%20engineer%20Kenya" target="_blank" rel="noopener">Find on LinkedIn Jobs ↗</a>
+          <span class="source">Source: Prospect 33 LinkedIn post</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya" data-text="co-operative bank co-op ai data architect nairobi deadline november 9 2026 architecture governance">
+        <div class="card-top">
+          <div class="logo">CB</div>
+          <div>
+            <div class="co">Co-operative Bank of Kenya</div>
+            <h3 class="role">AI &amp; Data Architect (stretch)</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-onsite">Nairobi</span>
+          <span class="badge b-urgent">Closes 9 Nov 2026</span>
+        </div>
+        <div class="meta">
+          <span><b>Scope:</b> target-state data architecture, governance, roadmaps, AI data readiness</span>
+          <span><b>Level:</b> Architect — several years above your current title</span>
+          <span><b>Sibling roles:</b> Data Scientist, AI Integration Engineer, AI Application Engineer, AI QA Automation Engineer (all close 9 Nov)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>55%</span></div>
+          <div class="bar"><i style="width:55%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Long-shot stretch application; useful if you want to signal architecture ambition.</li>
+          <li>Mention your Databricks medallion design, data contracts and governance work.</li>
+          <li>If not ready for architect level, apply to Data Engineer (DE/IID/2026) instead — same deadline.</li>
+        </ul>
+        <div class="tags"><span class="tag">Architecture</span><span class="tag">AI data</span><span class="tag">Governance</span><span class="tag">Stretch</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://www.myjobmag.co.ke/jobs/job-vacancies-at-co-operative-bank-of-kenya-5" target="_blank" rel="noopener">View all Co-op roles ↗</a>
+          <span class="source">Source: MyJobMag / Co-op Bank</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya watch" data-text="kemri data manager nairobi deadline november 20 2026 study data management entry validation research">
+        <div class="card-top">
+          <div class="logo">KE</div>
+          <div>
+            <div class="co">KEMRI</div>
+            <h3 class="role">Data Manager (adjacent — research data)</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-onsite">Nairobi</span>
+          <span class="badge b-watch">Closes 20 Nov 2026</span>
+        </div>
+        <div class="meta">
+          <span><b>Scope:</b> study data management, data entry oversight, validation, secure storage</span>
+          <span><b>Level:</b> mid-level data operations</span>
+          <span><b>Note:</b> adjacent to data engineering — lower ceiling, stable public research org</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>60%</span></div>
+          <div class="bar"><i style="width:60%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Your data-quality and validation experience is relevant, but the role is less engineering-heavy.</li>
+          <li>Consider only if you want a public-sector fallback while engineering roles process.</li>
+          <li>KEMRI also hires data engineers periodically — set an alert.</li>
+        </ul>
+        <div class="tags"><span class="tag">Research</span><span class="tag">Data quality</span><span class="tag">Public sector</span><span class="tag">Adjacent</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://joballer.com/it-technology-jobs" target="_blank" rel="noopener">View on Joballer ↗</a>
+          <span class="source">Source: Joballer / KEMRI</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya watch" data-text="i&m bank assistant manager data scientist nairobi november 2026 machine learning predictive analytics">
+        <div class="card-top">
+          <div class="logo">IM</div>
+          <div>
+            <div class="co">I&amp;M Bank</div>
+            <h3 class="role">Assistant Manager, Data Scientist (adjacent)</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-onsite">Nairobi</span>
+          <span class="badge b-watch">Posted 4 Nov 2026 — verify</span>
+        </div>
+        <div class="meta">
+          <span><b>Scope:</b> ML models, predictive analytics for banking use cases</span>
+          <span><b>Level:</b> assistant manager — mid/senior</span>
+          <span><b>Note:</b> data science rather than engineering; a bridge if you want the ML side</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>62%</span></div>
+          <div class="bar"><i style="width:62%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Your feature-pipeline and Databricks/MLflow-adjacent work is the bridge into this role.</li>
+          <li>Banks in Kenya rotate data staff between engineering and science — a useful foot in the door.</li>
+          <li>Watch I&amp;M for Data Engineer titles too; they are expanding the data team.</li>
+        </ul>
+        <div class="tags"><span class="tag">Banking</span><span class="tag">ML</span><span class="tag">Analytics</span><span class="tag">Adjacent</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://www.corporatestaffing.co.ke/category/banking-jobs-in-kenya/" target="_blank" rel="noopener">View on Corporate Staffing ↗</a>
+          <span class="source">Source: Corporate Staffing / I&amp;M</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="note">
+      <b>Apply-first order:</b> Co-op Bank Data Engineer (closes 9 Nov — email <b>jobs@co-opbank.co.ke</b>, ref <b>DE/IID/2026</b>) → CloudFactory (listing expires ~10 Nov) → <b>Prospect 33</b> remote-Kenya team (new, hiring now) → Accelera → KCB Data Architect (13 Nov) → KEMRI (20 Nov, adjacent) → Stanbic (verify deadline) → Watu (verify repost). Co-op is also hiring an AI &amp; Data Architect, Data Scientist, AI Integration Engineer, AI Application Engineer and AI QA Automation Engineer — all close 9 Nov.
+    </div>
+  </section>
+
+  <!-- LINKEDIN -->
+  <section id="linkedin">
+    <div class="section-head">
+      <div>
+        <h2>LinkedIn map — Kenyan data engineers &amp; their companies</h2>
+        <p>People publicly working as data engineers in Kenya, the companies they work for, and what is (or is not) open there right now. Use these profiles for warm referrals and to track team growth.</p>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Person</th>
+          <th>Role</th>
+          <th>Company</th>
+          <th>Opportunity found / action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://linkedin.com/in/bhochieng" target="_blank" rel="noopener">Brian Ochieng</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer — Big Data &amp; CVM</td>
+          <td>Safaricom PLC</td>
+          <td>No DE role live now; Senior Data Architect (M-PESA Africa) closed 12 Oct. Watch <a href="https://www.safaricom.co.ke/careers" target="_blank" rel="noopener">Safaricom careers</a>.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/jmekubo" target="_blank" rel="noopener">John Mekubo</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer / Big Data &amp; AI</td>
+          <td>Safaricom PLC</td>
+          <td>Same company as above. Good referral contact for Big Data/CVM team.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/lynnengendo" target="_blank" rel="noopener">Lydiah Ng'endo</a><div class="small">Nairobi</div></td>
+          <td>Senior Data Engineer &amp; BI Developer</td>
+          <td>Safaricom PLC</td>
+          <td>Openly says she is open to senior remote contracts — useful peer/network contact.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/christopher-wachira-7bb9b11b1" target="_blank" rel="noopener">Christopher Wachira</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>Cellulant</td>
+          <td>No DE role live; 9 other roles open. Watch <a href="https://www.cellulant.io/open-roles" target="_blank" rel="noopener">Cellulant open roles</a>.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/ben-sang-6295a021" target="_blank" rel="noopener">Ben Sang</a><div class="small">Nairobi</div></td>
+          <td>Principal Data Engineer</td>
+          <td>Cellulant</td>
+          <td>Principal-level contact for the payments data team; referral target.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/kelvin-karori" target="_blank" rel="noopener">Kelvin Njoroge</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>Kenya Airways</td>
+          <td>KQ Data Engineer role closed 23 Sep; Head of Data role hired. Watch <a href="https://careers.kenya-airways.com" target="_blank" rel="noopener">KQ careers</a>.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/caleb-kilemba" target="_blank" rel="noopener">Caleb Kilemba</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>Data Science East Africa</td>
+          <td>Training/community org rather than a product employer; useful for referrals and events.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/david-mwandairo-068aa53bb" target="_blank" rel="noopener">David Mwandairo</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>Data Science East Africa</td>
+          <td>Same community. Skills overlap: Airflow, dbt, Snowflake, BigQuery.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/dennis-maingi-1b207417a" target="_blank" rel="noopener">Dennis Maingi</a><div class="small">Nairobi</div></td>
+          <td>Senior Data Engineer</td>
+          <td>DATASEAL Software Ltd</td>
+          <td>Consultancy — send a speculative application highlighting Databricks/Airflow.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/ronald-nyagaka" target="_blank" rel="noopener">Ronald Nyagaka</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>Singlet</td>
+          <td>No public opening found; good target for a speculative message.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/otieno-oduor-a7b384226" target="_blank" rel="noopener">Otieno Oduor</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer (Python, SQL, dbt, Airflow)</td>
+          <td>Uwezo Fund Oversight Board</td>
+          <td>Public-sector data team; monitor for contract/consulting roles.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/tamla83" target="_blank" rel="noopener">Tapiwanashe Mlangeni</a><div class="small">Nairobi</div></td>
+          <td>Senior Data Engineer &amp; Architect</td>
+          <td>Freelance (ex-Untapped Global)</td>
+          <td>Openly targeting remote-first senior roles — useful peer for market intel.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/martin-wanjiru-98414111a" target="_blank" rel="noopener">Martin Wanjiru</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>Deel</td>
+          <td>Kenya-based at a remote-first global company (ex-Meta London). Best referral target for remote data roles.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/stephen-waigi-4a5ba1275" target="_blank" rel="noopener">Stephen Waigi</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer / Cloud Architect</td>
+          <td>Andela</td>
+          <td>Andela places African engineers into global remote roles — apply to their talent network directly.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/muyukani-kizito" target="_blank" rel="noopener">Muyukani Kizito</a><div class="small">Kenya</div></td>
+          <td>Data Engineer (dbt, GCP, AWS)</td>
+          <td>ThrottleUp Technologies (US, remote)</td>
+          <td>Proof that Kenya-based engineers land US-remote data roles — referral and market intel.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/kevinndungu985" target="_blank" rel="noopener">Kevin N.</a><div class="small">Nairobi</div></td>
+          <td>Solutions Architect / Snr Data Engineer</td>
+          <td>Network International</td>
+          <td>Payments fintech with a Nairobi hub; watch for data platform and solutions roles.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/kennedywambua" target="_blank" rel="noopener">Kennedy Wambua</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>NCBA Group</td>
+          <td>Bank data team; NCBA posts IT/platform roles on Fuzu regularly — set an alert.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/joyce-mwega-8688a7122" target="_blank" rel="noopener">Joyce Mwega</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>KCB Bank Group (ex-NCBA)</td>
+          <td>Direct contact for KCB's data team; moved from NCBA in 2026.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/daniel-gitau-5a452994" target="_blank" rel="noopener">Daniel Gitau</a><div class="small">Nairobi</div></td>
+          <td>Big Data Engineer</td>
+          <td>Safaricom PLC</td>
+          <td>Big Data/CVM team; also shares African-language AI/ML hiring leads.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/dennis-maiyo-69945611a" target="_blank" rel="noopener">Dennis Maiyo</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>Sanku (ex-Equity Bank)</td>
+          <td>Fintech + social-impact data engineering; strong network across Nairobi fintechs.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/maryjoy-kinyua" target="_blank" rel="noopener">MaryJoy Kinyua</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer, BI &amp; Analytics</td>
+          <td>APA Insurance</td>
+          <td>Insurance data team (Talend, Python, Power BI); adjacent BI/analytics openings.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/dancun-koech-4a643a308" target="_blank" rel="noopener">Dancun Koech</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>NAB / Airtel Africa</td>
+          <td>Telco-scale data engineering; watch Airtel Africa for data platform roles.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/iandanielmathenge" target="_blank" rel="noopener">Ian Daniel Mathenge</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer / Analytics Engineer</td>
+          <td>e-MPS</td>
+          <td>Builds end-to-end data infrastructure; active in Nairobi data community.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/vincent-kiti-3b7b69218" target="_blank" rel="noopener">Vincent Kiti</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer (ETL, Airflow, automation)</td>
+          <td>Reliance Infosystems</td>
+          <td>Systems integrator — good target for consulting-style data engineering work.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/eric-gachomba-82546b136" target="_blank" rel="noopener">Eric Gachomba</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>ArtSam Data Technologies</td>
+          <td>Nairobi data consultancy; send a speculative application with your Databricks portfolio.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/denzel-kinyua-a73597277" target="_blank" rel="noopener">Denzel Kinyua</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer (Spark, Kafka)</td>
+          <td>Data Science East Africa / Upwork</td>
+          <td>Community + freelance pipelines; useful for events, referrals and side contracts.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/emmanuelsitienei" target="_blank" rel="noopener">Emmanuel Sitienei</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer (Microsoft Fabric DP-600 &amp; DP-700)</td>
+          <td>Independent / consulting</td>
+          <td>Fabric + Databricks + dbt certified; peer contact for Microsoft-stack roles.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      <b>How to use this:</b> connect with a short note (“Hi — I’m a Kenya-based data engineer working with Databricks/Airflow/dbt/Snowflake. I saw your work at [company]; is your team hiring or open to referrals?”). Ask about the company's careers page, not for a job link. LinkedIn profiles may require login.
+    </div>
+  </section>
+
+  <!-- PIPELINES -->
+  <section id="pipelines">
+    <div class="section-head">
+      <div>
+        <h2>Always-on pipelines &amp; job boards</h2>
+        <p>Where to keep applying while the shortlisted roles are in flight. These platforms hire continuously or aggregate worldwide-remote data roles.</p>
+      </div>
+    </div>
+
+    <div class="pipe-grid">
+      <div class="pipe"><a href="https://www.andela.com/careers" target="_blank" rel="noopener">Andela</a><p>Matches African engineers to global remote roles. Strong fit for Kenya-based candidates.</p></div>
+      <div class="pipe"><a href="https://www.turing.com/jobs" target="_blank" rel="noopener">Turing</a><p>Vetted remote data/software roles with US companies.</p></div>
+      <div class="pipe"><a href="https://www.toptal.com/talent/apply" target="_blank" rel="noopener">Toptal</a><p>Elite freelance network; data engineering is a core vertical.</p></div>
+      <div class="pipe"><a href="https://www.crossover.com/jobs" target="_blank" rel="noopener">Crossover</a><p>Full-time remote roles with global companies; rigorous testing.</p></div>
+      <div class="pipe"><a href="https://www.deel.com/careers" target="_blank" rel="noopener">Deel</a><p>Remote-first company hiring across data/engineering.</p></div>
+      <div class="pipe"><a href="https://www.astronomer.io/careers" target="_blank" rel="noopener">Astronomer</a><p>The Apache Airflow company — check for engineering and solutions roles.</p></div>
+      <div class="pipe"><a href="https://getdbt.com/dbt-labs/open-roles" target="_blank" rel="noopener">dbt Labs</a><p>Mostly US/India remote; watch for EMEA openings.</p></div>
+      <div class="pipe"><a href="https://www.databricks.com/company/careers" target="_blank" rel="noopener">Databricks</a><p>Field/solutions engineering and data roles; global offices + remote.</p></div>
+      <div class="pipe"><a href="https://careers.snowflake.com" target="_blank" rel="noopener">Snowflake</a><p>Solutions/data engineering roles; check remote filters.</p></div>
+      <div class="pipe"><a href="https://about.gitlab.com/jobs" target="_blank" rel="noopener">GitLab</a><p>All-remote company; data engineering roles appear periodically.</p></div>
+      <div class="pipe"><a href="https://himalayas.app/jobs/data-engineer" target="_blank" rel="noopener">Himalayas</a><p>Remote data-engineer jobs with location filters (worldwide, EMEA, etc.).</p></div>
+      <div class="pipe"><a href="https://remotive.com/remote-jobs/data" target="_blank" rel="noopener">Remotive</a><p>Curated remote data jobs; filter by worldwide eligibility.</p></div>
+      <div class="pipe"><a href="https://matcha.fm/jobs/data-engineer/ww" target="_blank" rel="noopener">Matcha — worldwide</a><p>Startup data roles explicitly open worldwide.</p></div>
+      <div class="pipe"><a href="https://trulyremotework.com/remote-dbt-jobs" target="_blank" rel="noopener">TrulyRemoteWork — dbt</a><p>Worldwide dbt/analytics-engineering roles.</p></div>
+      <div class="pipe"><a href="https://www.brightermonday.co.ke/jobs/software-data/nairobi/full-time" target="_blank" rel="noopener">BrighterMonday</a><p>Largest Kenyan job board; filter Software &amp; Data.</p></div>
+      <div class="pipe"><a href="https://www.myjobmag.co.ke" target="_blank" rel="noopener">MyJobMag Kenya</a><p>Daily Kenyan vacancies; good for banks and telcos.</p></div>
+      <div class="pipe"><a href="https://www.fuzu.com/kenya" target="_blank" rel="noopener">Fuzu Kenya</a><p>Kenya/East Africa roles with remote/hybrid filters.</p></div>
+      <div class="pipe"><a href="https://www.corporatestaffing.co.ke/category/it-jobs-in-kenya/" target="_blank" rel="noopener">Corporate Staffing</a><p>Recruiter-run Kenyan IT listings; often first to post bank roles.</p></div>
+      <div class="pipe"><a href="https://www.ajirahub.co.ke" target="_blank" rel="noopener">AjiraHub</a><p>Kenyan tech/data job aggregator.</p></div>
+      <div class="pipe"><a href="https://www.linkedin.com/jobs" target="_blank" rel="noopener">LinkedIn Jobs</a><p>Set alerts: “Data Engineer”, Kenya + Remote; “Databricks”, worldwide.</p></div>
+      <div class="pipe"><a href="https://opentoafrica.com" target="_blank" rel="noopener">OpenToAfrica</a><p>337+ Africa-friendly remote roles, filterable by country and role.</p></div>
+      <div class="pipe"><a href="https://pyspark.in/jobs/" target="_blank" rel="noopener">PySpark.in Jobs</a><p>370+ live Spark/data roles, refreshed daily, remote filter.</p></div>
+      <div class="pipe"><a href="https://dailyremote.com/remote-data-engineer-jobs" target="_blank" rel="noopener">DailyRemote</a><p>1,240+ remote data-engineer jobs with worldwide/Africa filters.</p></div>
+      <div class="pipe"><a href="https://jobs.ashbyhq.com" target="_blank" rel="noopener">Ashby job board</a><p>Search company ATS boards directly (PDL, Oyster, RevenueBase and many startups).</p></div>
+    </div>
+  </section>
+
+  <!-- ACTION PLAN -->
+  <section id="plan">
+    <div class="section-head">
+      <div>
+        <h2>Application plan &amp; CV positioning</h2>
+        <p>Practical notes based on the gaps between your CV and the shortlisted roles.</p>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="panel">
+        <h3>This week (8–14 Nov)</h3>
+        <ol>
+          <li><b>Co-op Bank</b> — email application today/tomorrow with reference DE/IID/2026. Attach CV + cover letter; mention pipeline design, data quality, SQL/Python, banking/regulated data.</li>
+          <li><b>CloudFactory</b> — apply on Workable immediately. Rewrite your Dynasoft bullet to lead with “dbt + Snowflake + Python pipelines”.</li>
+          <li><b>Prospect 33</b> — find and apply to the remote-Kenya data engineer opening; it is a newly forming team, so apply before the pipeline fills.</li>
+          <li><b>Imagine Worldwide</b> — apply on Remotive. Africa-only eligibility is rare; lead with dbt-in-production, Airflow and Terraform.</li>
+          <li><b>People Data Labs</b> — apply to both Data Engineer and Senior Data Engineer. Use the same CV but tailor the summary to entity/data quality + Spark.</li>
+          <li><b>Oyster</b> — apply; Kenya is explicitly listed. Highlight AWS + Snowflake + Databricks + dbt/Airflow in the first 3 lines.</li>
+          <li><b>Accelera</b> — apply on BrighterMonday; frame 4.5+ years as “hands-on across batch and streaming, including Databricks/Kafka”.</li>
+          <li><b>KCB Data Architect</b> — apply by 13 Nov if you want the stretch; otherwise set a KCB alert for Data Engineer roles.</li>
+        </ol>
+      </div>
+
+      <div class="panel">
+        <h3>CV tweaks that raise your match</h3>
+        <ul>
+          <li><b>Lead with keywords:</b> Databricks, PySpark, Apache Airflow, dbt, Snowflake, Kafka, AWS (S3/RDS/SQS/EventBridge), Terraform, Docker.</li>
+          <li><b>Quantify:</b> add pipeline volumes, latency improvements, number of tables/models, cost or time saved. Recruiters scan for numbers.</li>
+          <li><b>Close gaps explicitly:</b> add a line on GCP/BigQuery exposure (even side projects) for Watu/Accelera; add PL/SQL familiarity for Stanbic.</li>
+          <li><b>Seniority framing:</b> for 5+ year roles, emphasise end-to-end ownership and mentoring; for 7+ year roles, emphasise architecture and cross-team delivery.</li>
+          <li><b>Remote proof:</b> mention distributed collaboration, async communication and overlapping hours with US/EU teams.</li>
+          <li><b>Certifications:</b> Databricks Certified Data Engineer Associate and SnowPro Core would materially strengthen PDL/Oyster/Addepto applications.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note">
+      <b>Reality check:</b> Job listings change daily. Every card links to the employer or a reputable aggregator — open the link and confirm the role is still live and that your country is eligible before applying. Salaries shown are only where the employer published them. “CV match” percentages are a subjective estimate based on the skills in your CV versus the listing text, not a guarantee.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Evans Langat — Data Engineer job shortlist.</b><br>
+      Generated 8 November 2026 from public job listings and LinkedIn profiles. Verify each role before applying.
+    </div>
+    <div>
+      Contact: evanslangat22@gmail.com · +254 705 719 262
+    </div>
+  </div>
+</footer>
+
+<script>
+  const chips = document.querySelectorAll('.chip');
+  const cards = document.querySelectorAll('.card');
+  const search = document.getElementById('search');
+
+  function applyFilters() {
+    const active = document.querySelector('.chip.active').dataset.filter;
+    const q = search.value.trim().toLowerCase();
+    cards.forEach(card => {
+      const cat = card.dataset.cat || '';
+      const text = (card.dataset.text || '') + ' ' + card.innerText.toLowerCase();
+      const catOk = active === 'all' || cat.includes(active);
+      const qOk = !q || text.toLowerCase().includes(q);
+      card.classList.toggle('hidden', !(catOk && qOk));
+    });
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  search.addEventListener('input', applyFilters);
+</script>
+
+</body>
+</html>

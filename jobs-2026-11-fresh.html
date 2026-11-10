@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evans Langat — Fresh Data Engineer Opportunities (Nov 2026)</title>
+<style>
+  :root {
+    --bg: #f4f6fb;
+    --card: #ffffff;
+    --ink: #111827;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --brand: #0f766e;
+    --brand-dark: #134e4a;
+    --accent: #4f46e5;
+    --green: #15803d;
+    --green-bg: #dcfce7;
+    --amber: #b45309;
+    --amber-bg: #fef3c7;
+    --blue: #1d4ed8;
+    --blue-bg: #dbeafe;
+    --red: #b91c1c;
+    --red-bg: #fee2e2;
+    --purple: #6d28d9;
+    --purple-bg: #ede9fe;
+    --gray-bg: #f3f4f6;
+    --shadow: 0 1px 2px rgba(16,24,40,.06), 0 8px 24px rgba(16,24,40,.06);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .hero {
+    background: radial-gradient(1200px 400px at 20% -10%, #1e3a8a 0%, transparent 60%),
+                linear-gradient(135deg, #0b1220 0%, #0f2a3a 55%, #134e4a 100%);
+    color: #fff;
+    padding: 48px 24px 36px;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+    color: #99f6e4; font-weight: 700;
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #2dd4bf; display: inline-block; }
+  .hero h1 { font-size: clamp(28px, 4vw, 44px); margin: 12px 0 8px; line-height: 1.1; letter-spacing: -.02em; }
+  .hero h1 span { color: #5eead4; }
+  .hero p.sub { color: #cbd5e1; max-width: 800px; font-size: 16px; margin: 0 0 20px; }
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 13.5px; color: #e2e8f0; }
+  .hero-meta strong { color: #fff; }
+  .hero-actions { margin-top: 22px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #14b8a6; color: #042f2e; font-weight: 700;
+    border: 0; border-radius: 10px; padding: 10px 16px; font-size: 14px;
+    cursor: pointer; transition: transform .15s ease, background .15s ease;
+  }
+  .btn:hover { background: #2dd4bf; transform: translateY(-1px); text-decoration: none; }
+  .btn.ghost { background: rgba(255,255,255,.08); color: #fff; border: 1px solid rgba(255,255,255,.22); }
+  .btn.ghost:hover { background: rgba(255,255,255,.16); }
+
+  .stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: -26px auto 0; position: relative; z-index: 2;
+  }
+  .stat {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 16px 18px; box-shadow: var(--shadow);
+  }
+  .stat .n { font-size: 26px; font-weight: 800; letter-spacing: -.02em; }
+  .stat .l { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+
+  main { padding: 34px 24px 60px; }
+  section { margin-top: 38px; scroll-margin-top: 90px; }
+  .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+  .section-head h2 { font-size: 23px; margin: 0; letter-spacing: -.02em; }
+  .section-head p { margin: 4px 0 0; color: var(--muted); font-size: 14px; max-width: 760px; }
+
+  .toolbar {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(244,246,251,.92); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 24px;
+  }
+  .toolbar-inner { max-width: 1180px; margin: 0 auto; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .chip {
+    border: 1px solid var(--line); background: #fff; color: #374151;
+    border-radius: 999px; padding: 7px 13px; font-size: 13px; font-weight: 600; cursor: pointer;
+    transition: all .15s ease;
+  }
+  .chip:hover { border-color: #9ca3af; }
+  .chip.active { background: var(--brand-dark); border-color: var(--brand-dark); color: #fff; }
+  a.chip { display: inline-flex; align-items: center; }
+  a.chip:hover { text-decoration: none; border-color: #9ca3af; }
+  .search {
+    margin-left: auto; min-width: 240px; flex: 1 1 240px; max-width: 340px;
+    border: 1px solid var(--line); background: #fff; border-radius: 999px;
+    padding: 8px 14px; font-size: 13.5px; color: var(--ink); outline: none;
+  }
+  .search:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(15,118,110,.14); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 18px; box-shadow: var(--shadow); display: flex; flex-direction: column;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 2px 4px rgba(16,24,40,.06), 0 14px 30px rgba(16,24,40,.10); }
+  .card.hidden { display: none; }
+  .card-top { display: flex; gap: 12px; align-items: flex-start; }
+  .logo {
+    width: 42px; height: 42px; border-radius: 11px; flex: 0 0 42px;
+    display: grid; place-items: center; font-weight: 800; font-size: 16px; color: #fff;
+    background: linear-gradient(135deg, #0f766e, #0e7490);
+  }
+  .co { font-size: 12.5px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+  .role { font-size: 16.5px; font-weight: 800; letter-spacing: -.01em; margin: 2px 0 0; line-height: 1.25; }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; }
+  .badge {
+    font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 999px;
+    letter-spacing: .02em; white-space: nowrap;
+  }
+  .b-remote { background: var(--green-bg); color: var(--green); }
+  .b-hybrid { background: var(--amber-bg); color: var(--amber); }
+  .b-onsite { background: var(--blue-bg); color: var(--blue); }
+  .b-world { background: var(--purple-bg); color: var(--purple); }
+  .b-salary { background: #e0f2fe; color: #075985; }
+  .b-urgent { background: var(--red-bg); color: var(--red); }
+  .b-watch { background: var(--gray-bg); color: #4b5563; }
+  .meta { margin: 10px 0 0; font-size: 12.5px; color: var(--muted); display: grid; gap: 3px; }
+  .meta b { color: #374151; font-weight: 600; }
+  .match { margin: 14px 0 0; }
+  .match-row { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+  .bar { height: 7px; background: #eef2f7; border-radius: 999px; margin-top: 6px; overflow: hidden; }
+  .bar > i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #0f766e, #2dd4bf); }
+  .why { margin: 12px 0 0; padding: 0 0 0 18px; font-size: 13px; color: #374151; }
+  .why li { margin: 4px 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; }
+  .tag { font-size: 11px; background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; border-radius: 6px; padding: 2px 7px; }
+  .card-foot { margin-top: auto; padding-top: 14px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .apply {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--brand-dark); color: #fff; font-weight: 700; font-size: 13px;
+    padding: 8px 13px; border-radius: 9px;
+  }
+  .apply:hover { background: var(--brand); text-decoration: none; }
+  .source { font-size: 11.5px; color: var(--muted); }
+
+  .note {
+    background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--brand);
+    border-radius: 12px; padding: 14px 16px; font-size: 13.5px; color: #374151; margin: 14px 0 0;
+  }
+  .note b { color: var(--ink); }
+  .note.warn { border-left-color: var(--amber); }
+
+  table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); }
+  th, td { text-align: left; padding: 11px 13px; font-size: 13px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: #f8fafc; font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; color: #475569; }
+  tr:last-child td { border-bottom: 0; }
+  td .small { color: var(--muted); font-size: 12px; }
+
+  .pipe-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+  .pipe {
+    background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 13px 14px;
+    box-shadow: var(--shadow);
+  }
+  .pipe a { font-weight: 700; font-size: 13.5px; }
+  .pipe p { margin: 4px 0 0; font-size: 12.5px; color: var(--muted); }
+
+  .two-col { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+  @media (max-width: 860px) { .two-col { grid-template-columns: 1fr; } }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); }
+  .panel h3 { margin: 0 0 10px; font-size: 16px; }
+  .panel ol, .panel ul { margin: 0; padding-left: 20px; font-size: 13.5px; color: #374151; }
+  .panel li { margin: 7px 0; }
+
+  footer { border-top: 1px solid var(--line); background: #fff; padding: 26px 24px; color: var(--muted); font-size: 12.5px; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  @media print {
+    .toolbar, .hero-actions, .search { display: none !important; }
+    body { background: #fff; }
+    .card, .panel, table { box-shadow: none; }
+    .card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> Fresh shortlist · verified 9 November 2026</div>
+    <h1>Evans Langat — <span>new</span> Data Engineer opportunities</h1>
+    <p class="sub">This list excludes every company you already applied to. It contains only roles verified live this week: nine worldwide-remote positions, plus the small number of genuinely open Kenya options. Where a promising company had only closed roles, it appears in the watchlist with the status rather than as a fake "live" card.</p>
+    <div class="hero-meta">
+      <span><strong>Based in:</strong> Kenya</span>
+      <span><strong>Target:</strong> Data Engineer / Senior DE / Analytics Engineer</span>
+      <span><strong>Core stack:</strong> Python · SQL · Databricks · Airflow · dbt · Snowflake · AWS · Kafka</span>
+      <span><strong>Experience:</strong> 4.5+ years</span>
+    </div>
+    <div class="hero-actions">
+      <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+      <a class="btn ghost" href="#remote">Remote worldwide (9)</a>
+      <a class="btn ghost" href="#kenya">Kenya roles (2)</a>
+      <a class="btn ghost" href="#linkedin">LinkedIn map</a>
+      <a class="btn ghost" href="#watch">Watchlist</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="n">9</div><div class="l">Worldwide-remote roles verified live</div></div>
+    <div class="stat"><div class="n">2</div><div class="l">Live Kenya roles (1 adjacent) + market status</div></div>
+    <div class="stat"><div class="n">12</div><div class="l">New Kenyan data engineers mapped</div></div>
+    <div class="stat"><div class="n">15</div><div class="l">Closed / ineligible roles tracked, not re-listed</div></div>
+  </div>
+</div>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <button class="chip active" data-filter="all">All roles</button>
+    <button class="chip" data-filter="remote">Remote worldwide</button>
+    <button class="chip" data-filter="kenya">Kenya</button>
+    <a class="chip" href="#watch">Watchlist</a>
+    <input class="search" id="search" type="search" placeholder="Search company, skill, city…" aria-label="Search jobs">
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- REMOTE WORLDWIDE -->
+  <section id="remote">
+    <div class="section-head">
+      <div>
+        <h2>Remote — worldwide / Kenya-eligible</h2>
+        <p>Every card links to the employer's own ATS where possible. Confirm the country list on the application page before investing time; "worldwide" on an aggregator does not always survive the employer's fine print.</p>
+      </div>
+    </div>
+
+    <div class="grid" id="remote-grid">
+
+      <article class="card" data-cat="remote" data-text="beehiiv data engineer global remote worldwide python sql clickhouse kafka airfare dbt aws newsletter">
+        <div class="card-top">
+          <div class="logo">BH</div>
+          <div>
+            <div class="co">beehiiv</div>
+            <h3 class="role">Data Engineer (Global)</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Global</span>
+          <span class="badge b-salary">$160K–$220K</span>
+          <span class="badge b-urgent">New — 6 Nov 2026</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Python, SQL, ClickHouse, Kafka, Airflow/dbt, AWS</span>
+          <span><b>Level:</b> 4+ years data engineering</span>
+          <span><b>Status:</b> Live on BambooHR — job #76 (verified 9 Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>90%</span></div>
+          <div class="bar"><i style="width:90%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Title and department are explicitly global — no US-only restriction on the posting.</li>
+          <li>Your Kafka + Airflow + Python pipeline work maps directly; ClickHouse is the one gap, address it as a columnar-store transfer from Snowflake/Databricks.</li>
+          <li>Highest published salary band on this list; apply first, while the posting is fresh.</li>
+        </ul>
+        <div class="tags"><span class="tag">Worldwide</span><span class="tag">Kafka</span><span class="tag">ClickHouse</span><span class="tag">Python</span><span class="tag">$160K–$220K</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://beehiiv.bamboohr.com/careers/76" target="_blank" rel="noopener">Apply on BambooHR ↗</a>
+          <span class="source">Source: beehiiv careers (BambooHR)</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="empowers staffing cloud data engineer worldwide snowflake databricks python sql aws azure airflow remote">
+        <div class="card-top">
+          <div class="logo">ES</div>
+          <div>
+            <div class="co">Empowers Staffing</div>
+            <h3 class="role">Cloud Data Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Worldwide</span>
+          <span class="badge b-urgent">Posted 7 Nov 2026</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Snowflake, Databricks, Python, SQL, AWS/Azure, Airflow</span>
+          <span><b>Level:</b> 4+ years data engineering</span>
+          <span><b>Status:</b> Live on Zoho Recruit (verified 9 Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>88%</span></div>
+          <div class="bar"><i style="width:88%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Snowflake + Databricks + Python is effectively your CV's headline stack.</li>
+          <li>Staffing agency — confirm whether it is contract or permanent, and who the end client is, on the first call.</li>
+          <li>Fresh posting with a broad location field; low applicant volume this early.</li>
+        </ul>
+        <div class="tags"><span class="tag">Snowflake</span><span class="tag">Databricks</span><span class="tag">Worldwide</span><span class="tag">Staffing</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://empowersstaffing.zohorecruit.com/jobs/Careers/831804000001098575" target="_blank" rel="noopener">Apply on Zoho ↗</a>
+          <span class="source">Source: Empowers Staffing careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="software estrategico senior data engineer sol-1634 worldwide python sql spark cloud orchestration remote">
+        <div class="card-top">
+          <div class="logo">SE</div>
+          <div>
+            <div class="co">Software Estrategico</div>
+            <h3 class="role">Senior Data Engineer — SOL-1634</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Worldwide</span>
+          <span class="badge b-urgent">Posted 7 Nov 2026</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Python, SQL, Spark, cloud warehouse, orchestration</span>
+          <span><b>Level:</b> Senior (4.5+ years fits)</span>
+          <span><b>Status:</b> Live on Zoho Recruit (verified 9 Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>84%</span></div>
+          <div class="bar"><i style="width:84%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Senior framing matches your 4.5+ years and end-to-end pipeline ownership.</li>
+          <li>Spark + SQL + Python are core requirements rather than nice-to-haves.</li>
+          <li>LatAm-rooted consultancy hiring globally — expect a client-placement model; ask about timezone overlap.</li>
+        </ul>
+        <div class="tags"><span class="tag">Senior</span><span class="tag">Spark</span><span class="tag">Worldwide</span><span class="tag">Consultancy</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://softwareestrategico.zohorecruit.com/jobs/Careers/684512000024350600" target="_blank" rel="noopener">Apply on Zoho ↗</a>
+          <span class="source">Source: Software Estrategico careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="velir senior analytics engineer remote snowflake bigquery dbt sql python salary 135000 150000">
+        <div class="card-top">
+          <div class="logo">V</div>
+          <div>
+            <div class="co">Velir</div>
+            <h3 class="role">Senior Analytics Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-salary">$135K–$150K</span>
+          <span class="badge b-urgent">Posted 5 Nov 2026</span>
+          <span class="badge b-watch">Confirm country eligibility</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Snowflake/BigQuery, dbt, SQL, Python, analytics engineering</span>
+          <span><b>Level:</b> Senior analytics engineer</span>
+          <span><b>Status:</b> Live on Greenhouse (verified 9 Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>80%</span></div>
+          <div class="bar"><i style="width:80%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Your dbt + Snowflake + SQL modelling work is the core of this role.</li>
+          <li>Salary is published — rare transparency, and the band is strong for a Kenya-based hire.</li>
+          <li>Caveat: US agency serving US clients; the posting says remote but does not promise worldwide. Confirm before applying, and lead with US-hours overlap.</li>
+        </ul>
+        <div class="tags"><span class="tag">dbt</span><span class="tag">Snowflake</span><span class="tag">Analytics engineering</span><span class="tag">$135K–$150K</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://job-boards.greenhouse.io/velir/jobs/5434525008" target="_blank" rel="noopener">Apply on Greenhouse ↗</a>
+          <span class="source">Source: Velir careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="shuru technologies senior data engineer worldwide azure databricks pyspark spark kafka python sql fintech remote">
+        <div class="card-top">
+          <div class="logo">SH</div>
+          <div>
+            <div class="co">Shuru Technologies</div>
+            <h3 class="role">Senior Data Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Worldwide</span>
+          <span class="badge b-urgent">Posted ~6 Nov 2026</span>
+          <span class="badge b-watch">Aggregator — employer hidden</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Azure Databricks, PySpark, Spark, Kafka, Python, SQL</span>
+          <span><b>Level:</b> 5–10 years</span>
+          <span><b>Status:</b> Live on DailyRemote; company masked as "[Hidden Company]"</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>82%</span></div>
+          <div class="bar"><i style="width:82%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Explicitly worldwide and fintech-flavoured — close to your Griffin Global Tech work.</li>
+          <li>Azure Databricks/PySpark is your Databricks experience with a different cloud paint.</li>
+          <li>Employer is hidden by the aggregator until you start the application; verify the company and contract before sharing your CV.</li>
+        </ul>
+        <div class="tags"><span class="tag">Worldwide</span><span class="tag">Azure Databricks</span><span class="tag">PySpark</span><span class="tag">Fintech</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://dailyremote.com/remote-job/senior-data-engineer-5880704" target="_blank" rel="noopener">View on DailyRemote ↗</a>
+          <span class="source">Source: DailyRemote (job 5880704)</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="tkxel senior data engineer azure data factory synapse databricks power bi python sql remote consultancy">
+        <div class="card-top">
+          <div class="logo">TX</div>
+          <div>
+            <div class="co">Tkxel</div>
+            <h3 class="role">Senior Data Engineer — Azure</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-watch">Older posting — verify still active</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Azure Data Factory, Synapse, Databricks, Power BI, Python, SQL</span>
+          <span><b>Level:</b> 5–8 years</span>
+          <span><b>Status:</b> Live on Tkxel careers; listed 22 Jun 2026</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>85%</span></div>
+          <div class="bar"><i style="width:85%"></i></div>
+        </div>
+        <ul class="why">
+          <li>The full Azure data stack — ADF, Synapse, Databricks — is named explicitly.</li>
+          <li>Your Databricks + Airflow + SQL work transfers cleanly; position ADF as orchestration equivalent.</li>
+          <li>Five months old, so treat it as a long shot and confirm it is still open before polishing a tailored CV.</li>
+        </ul>
+        <div class="tags"><span class="tag">Azure</span><span class="tag">ADF</span><span class="tag">Synapse</span><span class="tag">Databricks</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://jobs.tkxel.com/jobs/Careers/524295000041052813/Senior-Data-Engineer-Azure?source=CareerSite" target="_blank" rel="noopener">Apply on Tkxel ↗</a>
+          <span class="source">Source: Tkxel careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="hr for you data engineer worldwide remote python sql etl cloud 2 years">
+        <div class="card-top">
+          <div class="logo">HF</div>
+          <div>
+            <div class="co">HR For You</div>
+            <h3 class="role">Data Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Worldwide</span>
+          <span class="badge b-urgent">Posted 7 Nov 2026</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Python, SQL, ETL, cloud data warehouse</span>
+          <span><b>Level:</b> 2+ years (you exceed this — frame as value, not overkill)</span>
+          <span><b>Status:</b> Live on BambooHR — job #553 (verified 9 Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>78%</span></div>
+          <div class="bar"><i style="width:78%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Fast, low-friction application on a fresh worldwide posting.</li>
+          <li>Recruiting firm — the first reply will clarify the end client and contract type.</li>
+          <li>Because the bar is 2+ years, emphasise senior ownership and mentoring to avoid being screened as "too expensive".</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">ETL</span><span class="tag">Worldwide</span><span class="tag">Recruiter</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://hrforyou.bamboohr.com/careers/553" target="_blank" rel="noopener">Apply on BambooHR ↗</a>
+          <span class="source">Source: HR For You careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="growth minded senior data engineer anywhere remote python sql dbt cloud salary 45k 60k">
+        <div class="card-top">
+          <div class="logo">GM</div>
+          <div>
+            <div class="co">Growth Minded</div>
+            <h3 class="role">Senior Data Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Anywhere</span>
+          <span class="badge b-salary">$45K–$60K</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Python, SQL, dbt, cloud warehouse, pipelines</span>
+          <span><b>Level:</b> 2+ years (senior title, mid-level bar)</span>
+          <span><b>Status:</b> Live on WeWorkRemotely</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>78%</span></div>
+          <div class="bar"><i style="width:78%"></i></div>
+        </div>
+        <ul class="why">
+          <li>"Anywhere" location and a quick application — useful volume play.</li>
+          <li>Pay band is below your likely range; use it as a backup, not a priority.</li>
+          <li>Ask about scope: a "Senior" title with a 2+ year bar usually means broad ownership rather than pure seniority.</li>
+        </ul>
+        <div class="tags"><span class="tag">dbt</span><span class="tag">Anywhere</span><span class="tag">Backup</span><span class="tag">$45K–$60K</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://weworkremotely.com/remote-jobs/growth-minded-senior-data-engineer" target="_blank" rel="noopener">View on WWR ↗</a>
+          <span class="source">Source: We Work Remotely</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="remote" data-text="proxify senior data engineer azure databricks python sql anywhere remote talent network">
+        <div class="card-top">
+          <div class="logo">PX</div>
+          <div>
+            <div class="co">Proxify</div>
+            <h3 class="role">Senior Data Engineer (Azure)</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-remote">Remote</span>
+          <span class="badge b-world">Anywhere</span>
+          <span class="badge b-watch">Talent-network model</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Azure, Databricks, Python, SQL, data pipelines</span>
+          <span><b>Level:</b> Senior</span>
+          <span><b>Status:</b> Live on WeWorkRemotely — network application, not a single role</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>76%</span></div>
+          <div class="bar"><i style="width:76%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Worldwide talent network; your CV goes into consideration for multiple client roles.</li>
+          <li>Databricks + Python + SQL is a direct match; expect a technical screening before matching.</li>
+          <li>Compensation is agreed per client, so ask for the range early in the process.</li>
+        </ul>
+        <div class="tags"><span class="tag">Azure</span><span class="tag">Databricks</span><span class="tag">Anywhere</span><span class="tag">Network</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://weworkremotely.com/remote-jobs/proxify-ab-senior-data-engineer-azure-4" target="_blank" rel="noopener">View on WWR ↗</a>
+          <span class="source">Source: We Work Remotely</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="note">
+      <b>Priority order:</b> beehiiv (global, highest pay, freshest) → Empowers Staffing → Software Estrategico → Velir (confirm country) → Shuru (verify employer) → Tkxel → HR For You → Growth Minded / Proxify as volume backups.
+    </div>
+    <div class="note warn">
+      <b>Excluded after verification:</b> Tala's Senior Data Engineer is US-remote only ($130K–$200K), Zepz's is UK-remote only, Foundever's is Remote-India, and Curotec/Goodway Group restrict to LatAm/US. Paystack's Senior DE returns HTTP 410 (closed). None of these are Kenya-eligible, so they are not presented as opportunities.
+    </div>
+  </section>
+
+  <!-- KENYA -->
+  <section id="kenya">
+    <div class="section-head">
+      <div>
+        <h2>Kenya — remote / hybrid / onsite</h2>
+        <p>The Kenyan market is unusually thin this week: several listings expired in the last fortnight, and one remote lead was pulled from its ATS. These are the options that held up under verification.</p>
+      </div>
+    </div>
+
+    <div class="grid" id="kenya-grid">
+
+      <article class="card" data-cat="kenya" data-text="adunova digital data engineer kenya nairobi python sql etl full time deadline 15 december 2026 junior">
+        <div class="card-top">
+          <div class="logo">AD</div>
+          <div>
+            <div class="co">Adunova Digital</div>
+            <h3 class="role">Data Engineer</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-hybrid">Kenya office</span>
+          <span class="badge b-onsite">Full-time</span>
+          <span class="badge b-urgent">Apply by 15 Dec 2026</span>
+          <span class="badge b-watch">0–3 yrs band</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Python, SQL, ETL/ELT, cloud data pipelines</span>
+          <span><b>Level:</b> 0–3 years — below your 4.5 years; address this head-on</span>
+          <span><b>Status:</b> Live on Adunova careers; posted 24 days ago (mid-Oct 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>72%</span></div>
+          <div class="bar"><i style="width:72%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Real Kenya-based full-time role with a long application window — low urgency, real opening.</li>
+          <li>Scope is core data engineering: scalable pipelines and infrastructure for analytics and BI.</li>
+          <li>You are above the stated experience band. Apply only with a cover note that explains why the role appeals (product ownership, Kenya-based team) rather than pretending to be junior.</li>
+        </ul>
+        <div class="tags"><span class="tag">Kenya</span><span class="tag">Full-time</span><span class="tag">Python</span><span class="tag">ETL</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://portal.adunovadigital.com/careers?role=JOB-2610-004" target="_blank" rel="noopener">Apply on Adunova ↗</a>
+          <span class="source">Source: Adunova careers (JOB-2610-004)</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya" data-text="sand tech holdings forward deployed engineer kenya ministry of health python sql data integration ai deployment">
+        <div class="card-top">
+          <div class="logo">ST</div>
+          <div>
+            <div class="co">Sand Tech Holdings</div>
+            <h3 class="role">Forward Deployed Engineer, Kenya</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-onsite">Kenya</span>
+          <span class="badge b-hybrid">Embedded — Ministry of Health</span>
+          <span class="badge b-watch">Adjacent to DE, not a pure DE title</span>
+        </div>
+        <div class="meta">
+          <span><b>Stack:</b> Python, SQL, data integration, AI/analytics deployment</span>
+          <span><b>Level:</b> 5+ years engineering</span>
+          <span><b>Status:</b> Live on Greenhouse (verified 9 Nov 2026)</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>74%</span></div>
+          <div class="bar"><i style="width:74%"></i></div>
+        </div>
+        <ul class="why">
+          <li>The Health Operating System rollout is data-heavy: ingestion, integration and decision-support pipelines.</li>
+          <li>Your Python/SQL plus pipeline ownership fits the forward-deployed model — part engineer, part client-facing problem solver.</li>
+          <li>Title is not "Data Engineer", but the daily work is closer to data platform deployment than generic software engineering. Worth a tailored application.</li>
+        </ul>
+        <div class="tags"><span class="tag">Kenya</span><span class="tag">Health data</span><span class="tag">Python</span><span class="tag">Adjacent</span></div>
+        <div class="card-foot">
+          <a class="apply" href="https://job-boards.eu.greenhouse.io/sandtechholdingslimited/jobs/4836535101" target="_blank" rel="noopener">Apply on Greenhouse ↗</a>
+          <span class="source">Source: Sand Tech careers</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="kenya watch" data-text="kenya data engineering market status no live roles equity absa ncba moniepoint one acre fund sunculture food for education">
+        <div class="card-top">
+          <div class="logo">KE</div>
+          <div>
+            <div class="co">Kenya market note</div>
+            <h3 class="role">No additional verified DE vacancies this week</h3>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge b-watch">Status check — 9 Nov 2026</span>
+        </div>
+        <div class="meta">
+          <span><b>Checked:</b> Equity, Absa Kenya, NCBA, One Acre Fund, SunCulture, Food For Education, Moniepoint, KOKO</span>
+          <span><b>Result:</b> no live Kenya data-engineer vacancy at any of them today</span>
+          <span><b>Closest:</b> Moniepoint's Data Scientist (Fraud), remote Kenya — adjacent, not engineering</span>
+        </div>
+        <div class="match">
+          <div class="match-row"><span>CV match</span><span>—</span></div>
+          <div class="bar"><i style="width:20%"></i></div>
+        </div>
+        <ul class="why">
+          <li>Several well-known Kenyan employers are between hiring cycles — do not assume a stale search result is a live job.</li>
+          <li>Use the LinkedIn table below for referrals at these companies, and set alerts rather than applying to expired posts.</li>
+          <li>The Jobgether "Lead Data Engineer, Kenya" listing was removed from Lever during verification (HTTP 404).</li>
+        </ul>
+        <div class="tags"><span class="tag">Market status</span><span class="tag">No live DE</span><span class="tag">Set alerts</span></div>
+        <div class="card-foot">
+          <a class="apply" href="#watch">See watchlist ↗</a>
+          <span class="source">Source: company career pages, 9 Nov 2026</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- LINKEDIN -->
+  <section id="linkedin">
+    <div class="section-head">
+      <div>
+        <h2>LinkedIn map — new Kenyan data engineers &amp; their companies</h2>
+        <p>Twelve profiles not used in your earlier shortlists. Each row states what is actually open at that company today, so you can decide between a referral, a speculative message, or no action.</p>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Person</th>
+          <th>Role</th>
+          <th>Company</th>
+          <th>Opportunity found / action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://linkedin.com/in/jimmy-charo-2061231a2" target="_blank" rel="noopener">Jimmy Charo</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>SunCulture</td>
+          <td>SunCulture's DE role expired 31 Oct 2026. Referral target only; ask about the next data hire. <a href="https://sunculture.com/careers" target="_blank" rel="noopener">Careers ↗</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/nehemiah-onyinge" target="_blank" rel="noopener">Nehemiah Onyinge</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>Food For Education</td>
+          <td>Data &amp; Analytics Engineer closed 5 Oct 2026. No live DE. Community/referral contact; strong dbt + SQL overlap.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/hubert-kimani-49727a125" target="_blank" rel="noopener">Hubert Kimani</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>Equity Bank</td>
+          <td>No live DE on Equity careers. Referral target; Equity hires data engineers in cycles.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/james-koech-34a111181" target="_blank" rel="noopener">James Koech</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>Absa Bank Kenya</td>
+          <td>Only Absa DE found is a Johannesburg in-office role. No Kenya DE live; referral contact.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/nimrodkmaina" target="_blank" rel="noopener">Nimrod Maina</a><div class="small">Nairobi</div></td>
+          <td>Senior Data Engineer</td>
+          <td>Moniepoint</td>
+          <td>Moniepoint's DE role is closed (board redirects, 141 jobs, no DE). Adjacent live role: <b>Data Scientist (Fraud)</b>, remote Kenya. Referral for the data team.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/christopher-john" target="_blank" rel="noopener">Christopher John</a><div class="small">Nairobi</div></td>
+          <td>Senior Data Engineer</td>
+          <td>Deimos</td>
+          <td>Only a Senior SRE role is live. Speculative application or referral for future data-platform work.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/bryant-kiseu" target="_blank" rel="noopener">Bryant Kiseu</a><div class="small">Nairobi</div></td>
+          <td>Senior Developer Productivity Engineer</td>
+          <td>Zepz</td>
+          <td>Zepz Senior DE is UK-remote only; no Kenya-eligible DE. Platform-engineering referral contact.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/denis-gachagua-67121965" target="_blank" rel="noopener">Denis Gachagua</a><div class="small">Kenya</div></td>
+          <td>Data Engineer</td>
+          <td>One Acre Fund</td>
+          <td>One Acre Fund's DE expired 8 Jun 2026; no current DE. Referral for the analytics/data team.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/bonface-obilo-53080b74" target="_blank" rel="noopener">Bonface Obilo</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>NCBA Group</td>
+          <td>No DE among NCBA's 47 Fuzu roles. Referral target; bank data team contact.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/laureen-jerop-50102622a" target="_blank" rel="noopener">Laureen Jerop</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>NCBA Group</td>
+          <td>Same as above — second NCBA data-team contact for a referral approach.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/lchemwolo" target="_blank" rel="noopener">Leslie Chemwolo</a><div class="small">Nairobi</div></td>
+          <td>Head, Infrastructure &amp; Data Engineering</td>
+          <td>NCBA Group</td>
+          <td>Hiring manager for NCBA data engineering. Best direct contact if you want to pitch a speculative DE role.</td>
+        </tr>
+        <tr>
+          <td><a href="https://linkedin.com/in/Victor-roktok-a21a42163" target="_blank" rel="noopener">Victor Roktok</a><div class="small">Nairobi</div></td>
+          <td>Data Engineer</td>
+          <td>Sun King</td>
+          <td>Sun King's SAP Data Engineer is India-based; the Kenya-adjacent opening is Lead Analyst, Data Operations. Referral contact.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      <b>Outreach script:</b> "Hi — I'm a Kenya-based data engineer working with Databricks, Airflow, dbt and Snowflake (4.5+ years). I saw your work at [company]; is your team hiring, or open to a referral for a data engineering role?" Ask about the team and hiring plans, not for a job link — and never send an expired listing as your reason for reaching out.
+    </div>
+  </section>
+
+  <!-- WATCHLIST -->
+  <section id="watch">
+    <div class="section-head">
+      <div>
+        <h2>Watchlist &amp; verified-closed roles</h2>
+        <p>These are the leads that looked promising but failed verification. They are listed so you do not re-apply or waste time on stale search results.</p>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Role / company</th>
+          <th>Status on 9 Nov 2026</th>
+          <th>What to do</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Jobgether — Lead Data Engineer (Kenya)</b></td>
+          <td>Removed from Lever (HTTP 404) during verification.</td>
+          <td>Set a Jobgether alert; do not apply to the dead link.</td>
+        </tr>
+        <tr>
+          <td><b>Moniepoint — Data Engineer</b></td>
+          <td>Job URL redirects to the board; 141 open jobs, no DE across three pages.</td>
+          <td>Watch the board; adjacent Data Scientist (Fraud) is live for remote Kenya.</td>
+        </tr>
+        <tr>
+          <td><b>Co-operative Bank — Data Engineer</b></td>
+          <td>Closed 9 Nov 2026; also a previous-run company.</td>
+          <td>Excluded from this list.</td>
+        </tr>
+        <tr>
+          <td><b>Tala — Senior Data Engineer</b></td>
+          <td>Live, but remote US only, $130K–$200K.</td>
+          <td>Ineligible from Kenya.</td>
+        </tr>
+        <tr>
+          <td><b>Paystack — Senior Data Engineer</b></td>
+          <td>HTTP 410 Gone.</td>
+          <td>Role closed.</td>
+        </tr>
+        <tr>
+          <td><b>SunCulture — Data Engineer</b></td>
+          <td>Application deadline 31 Oct 2026 passed.</td>
+          <td>Referral only (Jimmy Charo).</td>
+        </tr>
+        <tr>
+          <td><b>Food For Education — Data &amp; Analytics Engineer</b></td>
+          <td>Deadline 5 Oct 2026 passed.</td>
+          <td>Referral only (Nehemiah Onyinge).</td>
+        </tr>
+        <tr>
+          <td><b>One Acre Fund — Data Engineer</b></td>
+          <td>Expired 8 Jun 2026; no current DE.</td>
+          <td>Alert + referral (Denis Gachagua).</td>
+        </tr>
+        <tr>
+          <td><b>Zepz — Senior Data Engineer</b></td>
+          <td>UK-remote only; posted 30 Jun 2026.</td>
+          <td>Ineligible from Kenya.</td>
+        </tr>
+        <tr>
+          <td><b>KOKO Networks — Senior Data Engineer</b></td>
+          <td>Undated aggregator listing; cannot confirm live.</td>
+          <td>Treat as stale; verify before applying.</td>
+        </tr>
+        <tr>
+          <td><b>d.light — BI Data Analytics Engineer</b></td>
+          <td>Closed (Aug–Oct 2026 rounds).</td>
+          <td>Watch d.light careers.</td>
+        </tr>
+        <tr>
+          <td><b>CrossBoundary — Data Engineer</b></td>
+          <td>JazzHR deadline 30 Jul 2026 passed.</td>
+          <td>Watch for a repost.</td>
+        </tr>
+        <tr>
+          <td><b>Leta — Data Engineer: Analytics</b></td>
+          <td>Nairobi on-site, 1–2 years, listed 31 Aug 2026.</td>
+          <td>Below your level; skip.</td>
+        </tr>
+        <tr>
+          <td><b>Absa — Specialist Data Engineer</b></td>
+          <td>Johannesburg, in-office, entry level.</td>
+          <td>Not Kenya; skip.</td>
+        </tr>
+        <tr>
+          <td><b>Foundever / Curotec / Goodway Group</b></td>
+          <td>Remote-India / LatAm+US / LatAm-only respectively.</td>
+          <td>Ineligible from Kenya.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note warn">
+      <b>Already applied, not re-listed:</b> all 42 cards from your previous shortlists are excluded — including People Data Labs, RevenueBase, Supabase, Canonical, Fivetran, Vercel, Benzinga, Oyster, Addepto, Co-operative Bank, CloudFactory, Prospect 33, Accelera, KCB, Stanbic, Watu, KEMRI, I&amp;M, M-KOPA, Safaricom, M-PESA Africa, Kenya Airways, Cellulant, Victory Farms, Andishi, Standard Bank, Moringa School, Talent Safari, Inkomoko, Execafrica, Aga Khan, Turing and Lemon.io.
+    </div>
+  </section>
+
+  <!-- PIPELINES -->
+  <section id="pipelines">
+    <div class="section-head">
+      <div>
+        <h2>Always-on pipelines &amp; job boards</h2>
+        <p>Where to keep applying while the shortlisted roles are in flight.</p>
+      </div>
+    </div>
+
+    <div class="pipe-grid">
+      <div class="pipe"><a href="https://www.andela.com/careers" target="_blank" rel="noopener">Andela</a><p>Matches African engineers to global remote roles.</p></div>
+      <div class="pipe"><a href="https://www.toptal.com/talent/apply" target="_blank" rel="noopener">Toptal</a><p>Elite freelance network; data engineering is a core vertical.</p></div>
+      <div class="pipe"><a href="https://www.crossover.com/jobs" target="_blank" rel="noopener">Crossover</a><p>Full-time remote roles with global companies.</p></div>
+      <div class="pipe"><a href="https://about.gitlab.com/jobs" target="_blank" rel="noopener">GitLab</a><p>All-remote company; data engineering roles appear periodically.</p></div>
+      <div class="pipe"><a href="https://himalayas.app/jobs/data-engineer" target="_blank" rel="noopener">Himalayas</a><p>Remote data-engineer jobs with location filters.</p></div>
+      <div class="pipe"><a href="https://remotive.com/remote-jobs/data" target="_blank" rel="noopener">Remotive</a><p>Curated remote data jobs; check worldwide eligibility.</p></div>
+      <div class="pipe"><a href="https://matcha.fm/jobs/data-engineer/ww" target="_blank" rel="noopener">Matcha — worldwide</a><p>Startup data roles explicitly open worldwide.</p></div>
+      <div class="pipe"><a href="https://trulyremotework.com/remote-dbt-jobs" target="_blank" rel="noopener">TrulyRemoteWork — dbt</a><p>Worldwide dbt/analytics-engineering roles.</p></div>
+      <div class="pipe"><a href="https://www.brightermonday.co.ke/jobs/software-data/nairobi/full-time" target="_blank" rel="noopener">BrighterMonday</a><p>Largest Kenyan job board; filter Software &amp; Data.</p></div>
+      <div class="pipe"><a href="https://www.myjobmag.co.ke" target="_blank" rel="noopener">MyJobMag Kenya</a><p>Daily Kenyan vacancies; good for banks and telcos.</p></div>
+      <div class="pipe"><a href="https://www.fuzu.com/kenya" target="_blank" rel="noopener">Fuzu Kenya</a><p>Kenya/East Africa roles with remote/hybrid filters.</p></div>
+      <div class="pipe"><a href="https://www.corporatestaffing.co.ke/category/it-jobs-in-kenya/" target="_blank" rel="noopener">Corporate Staffing</a><p>Recruiter-run Kenyan IT listings; often first to post bank roles.</p></div>
+      <div class="pipe"><a href="https://www.linkedin.com/jobs" target="_blank" rel="noopener">LinkedIn Jobs</a><p>Set alerts: "Data Engineer", Kenya + Remote; "Databricks", worldwide.</p></div>
+      <div class="pipe"><a href="https://dailyremote.com/remote-data-engineer-jobs" target="_blank" rel="noopener">DailyRemote</a><p>1,240+ remote data-engineer jobs with worldwide/Africa filters.</p></div>
+      <div class="pipe"><a href="https://opentoafrica.com" target="_blank" rel="noopener">OpenToAfrica</a><p>Africa-friendly remote roles, filterable by country.</p></div>
+      <div class="pipe"><a href="https://pyspark.in/jobs/" target="_blank" rel="noopener">PySpark.in Jobs</a><p>370+ live Spark/data roles, refreshed daily.</p></div>
+    </div>
+  </section>
+
+  <!-- ACTION PLAN -->
+  <section id="plan">
+    <div class="section-head">
+      <div>
+        <h2>Application plan &amp; CV positioning</h2>
+        <p>Ordered by expected return per hour of effort, based on freshness, eligibility and fit.</p>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="panel">
+        <h3>This week (9–15 Nov)</h3>
+        <ol>
+          <li><b>beehiiv — Data Engineer (Global).</b> Apply today. Lead with Kafka streaming, Airflow orchestration and Snowflake/Databricks modelling; mention ClickHouse as a transferable columnar store. Reference job #76.</li>
+          <li><b>Empowers Staffing — Cloud Data Engineer.</b> Tailor the summary to Snowflake + Databricks + Python, and ask about contract type and end client.</li>
+          <li><b>Software Estrategico — Senior Data Engineer (SOL-1634).</b> Senior framing, Spark/SQL depth, and a note on remote timezone overlap.</li>
+          <li><b>Velir — Senior Analytics Engineer.</b> Confirm worldwide eligibility first; if yes, apply with dbt + Snowflake modelling examples and US-hours availability.</li>
+          <li><b>Adunova Digital — Data Engineer.</b> Kenya-based; write a short cover note explaining why a 0–3 year band role appeals to a 4.5-year engineer (ownership, local impact).</li>
+          <li><b>Sand Tech — Forward Deployed Engineer.</b> Position your data integration and stakeholder-facing delivery experience; mention public-sector/health-data sensitivity if relevant.</li>
+          <li><b>Shuru, Tkxel, HR For You, Growth Minded, Proxify.</b> Volume applications after the top six; verify each employer and compensation band before investing in a tailored CV.</li>
+        </ol>
+      </div>
+
+      <div class="panel">
+        <h3>CV tweaks that raise your match</h3>
+        <ul>
+          <li><b>Headline keywords:</b> Databricks, PySpark, Apache Airflow, dbt, Snowflake, Kafka, AWS (S3/RDS/SQS/EventBridge), Terraform, Docker.</li>
+          <li><b>For beehiiv:</b> add an explicit line on real-time/streaming ingestion (Kafka → warehouse) and event-volume numbers.</li>
+          <li><b>For Velir:</b> foreground dbt models, analytics-engineering ownership and warehouse cost/performance wins.</li>
+          <li><b>For Azure roles (Shuru, Tkxel, Proxify):</b> add an "Azure-equivalent" line mapping ADF/Synapse concepts to your Airflow/Databricks experience.</li>
+          <li><b>For Adunova:</b> do not hide your seniority — explain the value of a senior engineer in a small Kenya team.</li>
+          <li><b>Quantify everything:</b> pipeline volumes, tables/models owned, latency or cost improvements, team members mentored.</li>
+          <li><b>Remote proof:</b> distributed collaboration, async communication, and overlapping hours with US/EU teams.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note">
+      <b>Reality check:</b> Listings change daily and aggregators lag. Every role above was opened and checked on 9 November 2026, but confirm the page still loads and your country is eligible before applying. "CV match" percentages are a subjective estimate from your CV against the listing text — not a guarantee. LinkedIn profiles may require login.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Evans Langat — fresh Data Engineer shortlist.</b><br>
+      Generated 9 November 2026 from employer ATS pages, job boards and public LinkedIn profiles. Every previous-run company is excluded.
+    </div>
+    <div>
+      Contact: evanslangat22@gmail.com · +254 705 719 262
+    </div>
+  </div>
+</footer>
+
+<script>
+  const chips = document.querySelectorAll('.chip');
+  const cards = document.querySelectorAll('.card');
+  const search = document.getElementById('search');
+
+  function applyFilters() {
+    const active = document.querySelector('.chip.active').dataset.filter;
+    const q = search.value.trim().toLowerCase();
+    cards.forEach(card => {
+      const cat = card.dataset.cat || '';
+      const text = (card.dataset.text || '') + ' ' + card.innerText.toLowerCase();
+      const catOk = active === 'all' || cat.includes(active);
+      const qOk = !q || text.toLowerCase().includes(q);
+      card.classList.toggle('hidden', !(catOk && qOk));
+    });
+  }
+
+  document.querySelectorAll('.chip[data-filter]').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.chip[data-filter]').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  search.addEventListener('input', applyFilters);
+</script>
+
+</body>
+</html>
